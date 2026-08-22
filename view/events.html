@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover upcoming, featured, and past NJC Global events.">
+    <title>Events | NJC Global</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html"><b>N</b><span>NJC Global</span></a>
+        <button class="menu" type="button" aria-expanded="false" aria-controls="nav"><span class="material-symbols-outlined">menu</span><i>Menu</i></button>
+        <nav id="nav" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html">About Us</a>
+          <a class="active" href="events.html" aria-current="page">Events</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <a class="button nav-cta" href="contact-us.html#work-with-us">Work with us</a>
+      </div>
+    </header>
+
+    <main class="events-page">
+      <section class="events-hero">
+        <div class="events-hero-image" role="img" aria-label="A prestigious business event with people connecting in warm directional light"></div>
+        <div class="events-hero-badge" aria-hidden="true">
+          <span class="material-symbols-outlined">event_available</span>
+          <small>Curated encounters</small>
+        </div>
+        <div class="container events-hero-copy">
+          <p class="eyebrow">NJC Global Events</p>
+          <h1>Where Ideas, People and <em>Opportunity</em> Meet.</h1>
+        </div>
+      </section>
+
+      <section class="events-browser reveal-event">
+        <div class="container">
+          <div class="events-tabs" role="tablist" aria-label="Event categories">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="all-events" data-target="all-events">All Events</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="upcoming" data-target="upcoming">Upcoming</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="featured" data-target="featured">Featured</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="past" data-target="past">Past Events</button>
+            <div class="event-search-tools">
+              <label class="event-search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input id="event-search" type="search" placeholder="Search events by name or tag" aria-label="Search events by name or tag">
+              </label>
+
+              <button class="filter-trigger" id="filter-trigger" type="button" aria-haspopup="dialog" aria-controls="filter-modal" aria-expanded="false">
+                <span class="material-symbols-outlined">tune</span>
+                <span>Filters</span>
+                <b id="filter-count" hidden>0</b>
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-modal" id="filter-modal" hidden>
+            <button class="filter-modal-backdrop" type="button" data-close-filter aria-label="Close filters"></button>
+            <div class="filter-dialog" role="dialog" aria-modal="true" aria-labelledby="filter-title">
+              <div class="filter-dialog-header">
+                <div><span class="material-symbols-outlined">tune</span><h2 id="filter-title">Filter Events</h2></div>
+                <button type="button" data-close-filter aria-label="Close filters"><span class="material-symbols-outlined">close</span></button>
+              </div>
+
+              <div class="filter-dialog-body">
+                <label class="modal-filter-field">
+                  <span>Region</span>
+                  <select id="region-filter">
+                    <option value="all">All regions</option>
+                    <option value="rwanda">Rwanda</option>
+                    <option value="global">Global</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="ghana">Ghana</option>
+                  </select>
+                </label>
+
+                <label class="modal-filter-field">
+                  <span>Date</span>
+                  <select id="date-filter">
+                    <option value="all">All dates</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="filter-dialog-actions">
+                <button class="filter-reset" id="filter-reset" type="button">Reset</button>
+                <button class="button" id="filter-apply" type="button">Apply Filters</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel active" id="all-events" role="tabpanel">
+            <div class="all-event-groups">
+              <section class="compact-event-group"><div class="compact-group-heading"><span>01</span><h2>Upcoming</h2></div><div class="compact-event-list" data-event-source="upcoming"></div></section>
+              <section class="compact-event-group"><div class="compact-group-heading"><span>02</span><h2>Featured</h2></div><div class="compact-event-list" data-event-source="featured"></div></section>
+              <section class="compact-event-group"><div class="compact-group-heading"><span>03</span><h2>Past Events</h2></div><div class="compact-event-list" data-event-source="past"></div></section>
+            </div>
+            <p class="filter-empty" hidden>No events match these filters.</p>
+          </div>
+
+          <div class="tab-panel" id="upcoming" role="tabpanel" hidden>
+            <div class="compact-event-list">
+              <article class="compact-event-card event-filter-card" data-region="rwanda" data-date="2024" data-search="the future of african enterprise leadership summit business founders executives">
+                <div class="compact-event-thumb enterprise-thumb"></div>
+                <div class="compact-event-copy"><span class="event-type">Leadership Summit</span><h3>The Future of African Enterprise</h3><p>Oct 12–14, 2024 <i></i> Kigali Convention Centre</p></div>
+                <a class="compact-event-link" href="event-details.html">View Details <span class="material-symbols-outlined">arrow_outward</span></a>
+              </article>
+              <article class="compact-event-card event-filter-card" data-region="global" data-date="2024" data-search="narrative control in global media media workshop executives pr">
+                <div class="compact-event-thumb workshop-thumb"></div>
+                <div class="compact-event-copy"><span class="event-type">Media Workshop</span><h3>Narrative Control in Global Media</h3><p>Nov 05, 2024 <i></i> Global</p></div>
+                <a class="compact-event-link" href="event-details.html#media-workshop">View Details <span class="material-symbols-outlined">arrow_outward</span></a>
+              </article>
+            </div>
+            <p class="filter-empty" hidden>No upcoming events match these filters.</p>
+          </div>
+
+          <div class="tab-panel" id="featured" role="tabpanel" hidden>
+            <div class="compact-event-list">
+              <article class="compact-event-card compact-event-featured event-filter-card" data-region="uk" data-date="2024" data-search="diaspora impact gala exclusive dinner london leaders changemakers">
+                <div class="compact-event-thumb gala-thumb"></div>
+                <div class="compact-event-copy"><span class="event-type">Exclusive Dinner</span><h3>Diaspora Impact Gala</h3><p>Invitation only <i></i> London, UK</p></div>
+                <a class="compact-event-link" href="event-details.html#diaspora-gala">View Details <span class="material-symbols-outlined">arrow_outward</span></a>
+              </article>
+            </div>
+            <p class="filter-empty" hidden>No featured events match these filters.</p>
+          </div>
+
+          <div class="tab-panel" id="past" role="tabpanel" hidden>
+            <div class="compact-event-list">
+              <article class="compact-event-card event-filter-card" data-region="global" data-date="2023" data-search="talent migration patterns panel attendees countries">
+                <div class="compact-event-thumb panel-thumb"></div><div class="compact-event-copy"><span class="event-type">Panel</span><h3>Talent Migration Patterns 2023</h3><p>1.2k Attendees <i></i> 8 Countries</p></div><a class="compact-event-link" href="event-details.html">Recap <span class="material-symbols-outlined">arrow_outward</span></a>
+              </article>
+              <article class="compact-event-card event-filter-card" data-region="nigeria" data-date="2023" data-search="creative leaders mixer networking lagos">
+                <div class="compact-event-thumb mixer-thumb"></div><div class="compact-event-copy"><span class="event-type">Networking</span><h3>Creative Leaders Mixer</h3><p>Q3 2023 <i></i> Lagos</p></div><a class="compact-event-link" href="event-details.html">Recap <span class="material-symbols-outlined">arrow_outward</span></a>
+              </article>
+              <article class="compact-event-card event-filter-card" data-region="ghana" data-date="2023" data-search="pan-african innovation forum accra technology">
+                <div class="compact-event-thumb innovation-thumb"></div><div class="compact-event-copy"><span class="event-type">Forum</span><h3>Pan-African Innovation Forum</h3><p>850 Attendees <i></i> Accra</p></div><a class="compact-event-link" href="event-details.html">Recap <span class="material-symbols-outlined">arrow_outward</span></a>
+              </article>
+            </div>
+            <p class="filter-empty" hidden>No past events match these filters.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="events-cta reveal-event">
+        <div class="container">
+          <div class="events-cta-icon" aria-hidden="true"><span class="material-symbols-outlined">celebration</span></div>
+          <div><h2>Planning a high-stakes event?</h2><p>Leverage our extensive network and operational excellence to curate experiences that leave a lasting impact on the global stage.</p></div>
+          <a class="button" href="contact-us.html#work-with-us">Plan Your Event With Us <span class="material-symbols-outlined">arrow_outward</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div><a class="brand" href="../index.html"><b>N</b><span>NJC Global</span></a><p>Pioneering African excellence through high-impact talent execution and world-class media curation.</p></div>
+        <div><h3>Explore</h3><a href="services.html">Services</a><a href="about-us.html">About Us</a><a href="blog.html">Insights Blog</a><a href="#">Press Center</a></div>
+        <div><h3>Work With Us</h3><a href="contact-us.html#work-with-us">Talent Solutions</a><a href="contact-us.html#work-with-us">Strategic Advisory</a><a href="contact-us.html#work-with-us">Careers</a><a href="contact-us.html#work-with-us">Partnership Inquiries</a></div>
+        <form><h3>Stay Connected</h3><p>Join our inner circle for updates on African excellence.</p><label for="events-email">Email Address</label><div><input id="events-email" type="email" placeholder="Email Address" required><button type="submit" aria-label="Join newsletter">→</button></div></form>
+      </div>
+      <div class="container footer-bottom"><p>© 2026 NJC Global. All rights reserved.</p><p><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></p></div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector('.menu');
+      const navigation = document.querySelector('nav');
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        navigation.classList.toggle('open', !isOpen);
+        menuButton.firstElementChild.textContent = isOpen ? 'menu' : 'close';
+      });
+
+      navigation.addEventListener('click', (event) => {
+        if (event.target.matches('a')) {
+          navigation.classList.remove('open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.firstElementChild.textContent = 'menu';
+        }
+      });
+
+      document.querySelectorAll('.tab-button').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.tab-button').forEach((tab) => {
+            tab.classList.remove('active');
+            tab.setAttribute('aria-selected', 'false');
+          });
+          document.querySelectorAll('.tab-panel').forEach((panel) => {
+            panel.classList.remove('active');
+            panel.hidden = true;
+          });
+
+          const panel = document.getElementById(button.dataset.target);
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+          panel.hidden = false;
+          requestAnimationFrame(() => {
+            panel.classList.add('active');
+            applyEventFilters();
+          });
+        });
+      });
+
+      const regionFilter = document.getElementById('region-filter');
+      const dateFilter = document.getElementById('date-filter');
+      const eventSearch = document.getElementById('event-search');
+      const filterModal = document.getElementById('filter-modal');
+      const filterTrigger = document.getElementById('filter-trigger');
+      const filterApply = document.getElementById('filter-apply');
+      const filterReset = document.getElementById('filter-reset');
+      const filterCount = document.getElementById('filter-count');
+      let appliedRegion = regionFilter.value;
+      let appliedDate = dateFilter.value;
+
+      document.querySelectorAll('[data-event-source]').forEach((target) => {
+        const sourcePanel = document.getElementById(target.dataset.eventSource);
+        sourcePanel.querySelectorAll('.compact-event-card').forEach((card) => {
+          target.appendChild(card.cloneNode(true));
+        });
+      });
+
+      function applyEventFilters() {
+        const activePanel = document.querySelector('.tab-panel.active');
+        const selectedRegion = appliedRegion;
+        const selectedDate = appliedDate;
+        const searchTerm = eventSearch.value.trim().toLowerCase();
+        const cards = activePanel.querySelectorAll('.event-filter-card');
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const matchesRegion = selectedRegion === 'all' || card.dataset.region === selectedRegion;
+          const matchesDate = selectedDate === 'all' || card.dataset.date === selectedDate;
+          const matchesSearch = !searchTerm || card.dataset.search.includes(searchTerm);
+          const isMatch = matchesRegion && matchesDate && matchesSearch;
+
+          card.hidden = !isMatch;
+          if (isMatch) visibleCount += 1;
+        });
+
+        const emptyMessage = activePanel.querySelector('.filter-empty');
+        if (emptyMessage) emptyMessage.hidden = visibleCount !== 0;
+
+        activePanel.querySelectorAll('.side-events').forEach((group) => {
+          group.hidden = !group.querySelector('.event-filter-card:not([hidden])');
+        });
+
+        activePanel.querySelectorAll('.compact-event-group').forEach((group) => {
+          group.hidden = !group.querySelector('.event-filter-card:not([hidden])');
+        });
+
+        const activeFilterCount = [selectedRegion !== 'all', selectedDate !== 'all'].filter(Boolean).length;
+        filterCount.textContent = activeFilterCount;
+        filterCount.hidden = activeFilterCount === 0;
+      }
+
+      function openFilterModal() {
+        regionFilter.value = appliedRegion;
+        dateFilter.value = appliedDate;
+        filterModal.hidden = false;
+        filterTrigger.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('modal-open');
+        requestAnimationFrame(() => filterModal.classList.add('open'));
+        regionFilter.focus();
+      }
+
+      function closeFilterModal() {
+        filterModal.classList.remove('open');
+        filterTrigger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('modal-open');
+        setTimeout(() => {
+          filterModal.hidden = true;
+          filterTrigger.focus();
+        }, 250);
+      }
+
+      filterTrigger.addEventListener('click', openFilterModal);
+      document.querySelectorAll('[data-close-filter]').forEach((button) => button.addEventListener('click', closeFilterModal));
+      filterApply.addEventListener('click', () => {
+        appliedRegion = regionFilter.value;
+        appliedDate = dateFilter.value;
+        applyEventFilters();
+        closeFilterModal();
+      });
+      filterReset.addEventListener('click', () => {
+        regionFilter.value = 'all';
+        dateFilter.value = 'all';
+        appliedRegion = 'all';
+        appliedDate = 'all';
+        applyEventFilters();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !filterModal.hidden) closeFilterModal();
+      });
+      eventSearch.addEventListener('input', applyEventFilters);
+      applyEventFilters();
+
+      const siteHeader = document.querySelector('.site-header');
+      const stickyBoundary = document.querySelector('.events-cta');
+
+      function updateHeaderBoundary() {
+        const boundaryReached = stickyBoundary.getBoundingClientRect().top <= siteHeader.offsetHeight;
+        siteHeader.classList.toggle('sticky-paused', boundaryReached);
+      }
+
+      window.addEventListener('scroll', updateHeaderBoundary, { passive: true });
+      window.addEventListener('resize', updateHeaderBoundary);
+      updateHeaderBoundary();
+
+      document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        event.currentTarget.querySelector('button').textContent = '✓';
+        event.currentTarget.querySelector('input').value = '';
+      });
+
+      const revealSections = document.querySelectorAll('.reveal-event');
+      let previousScrollPosition = window.scrollY;
+      let scrollDirection = 'down';
+
+      window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.scrollY;
+        if (Math.abs(currentScrollPosition - previousScrollPosition) > 4) {
+          scrollDirection = currentScrollPosition > previousScrollPosition ? 'down' : 'up';
+          previousScrollPosition = currentScrollPosition;
+        }
+      }, { passive: true });
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.12) {
+            entry.target.dataset.scrollDirection = scrollDirection;
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: [0, 0.12], rootMargin: '-3% 0px -3% 0px' });
+
+      revealSections.forEach((section) => revealObserver.observe(section));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Event details, schedules, locations, and registration information for NJC Global events.">
+    <title>Event Details | NJC Global</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html"><b>N</b><span>NJC Global</span></a>
+        <button class="menu" type="button" aria-expanded="false" aria-controls="nav"><span class="material-symbols-outlined">menu</span><i>Menu</i></button>
+        <nav id="nav" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html">About Us</a>
+          <a class="active" href="events.html">Events</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <a class="button nav-cta" href="contact-us.html#work-with-us">Work with us</a>
+      </div>
+    </header>
+
+    <main class="event-details-page">
+      <section class="event-details-hero">
+        <div class="container event-details-grid">
+          <div>
+            <a class="event-back-link" href="events.html">← Back to Events</a>
+            <p class="eyebrow">Leadership Summit</p>
+            <h1>The Future of African Enterprise</h1>
+            <p class="event-details-lead">A high-level gathering of visionary founders, executives, investors, and policy leaders shaping the next chapter of enterprise across Africa.</p>
+            <div class="event-detail-meta">
+              <span><span class="material-symbols-outlined">calendar_today</span> Oct 12–14, 2024</span>
+              <span><span class="material-symbols-outlined">location_on</span> Kigali Convention Centre</span>
+            </div>
+            <a class="button" href="contact-us.html#work-with-us">Register Your Interest</a>
+          </div>
+          <div class="event-detail-mockup"><div class="event-detail-image"></div></div>
+        </div>
+      </section>
+
+      <section class="event-information">
+        <div class="container event-information-grid">
+          <article><span class="material-symbols-outlined">lightbulb</span><h2>What to Expect</h2><p>Forward-looking conversations, focused networking, and practical insight from leaders building resilient institutions and globally competitive businesses.</p></article>
+          <article><span class="material-symbols-outlined">groups</span><h2>Who Should Attend</h2><p>CEOs, founders, investors, public-sector leaders, media executives, and ecosystem builders working across African markets.</p></article>
+          <article><span class="material-symbols-outlined">workspace_premium</span><h2>The Experience</h2><p>Curated keynotes, intimate roundtables, strategic introductions, and a premium environment designed for meaningful connection.</p></article>
+        </div>
+      </section>
+
+      <section class="related-event-detail" id="media-workshop">
+        <div class="container"><p class="eyebrow">Media Workshop</p><h2>Narrative Control in Global Media</h2><p>Masterclass for executives on shaping brand narratives internationally.</p><span>Nov 05, 2024</span><a class="button" href="contact-us.html">Request Details</a></div>
+      </section>
+
+      <section class="related-event-detail dark-related-event" id="diaspora-gala">
+        <div class="container"><p class="eyebrow">Exclusive Dinner</p><h2>Diaspora Impact Gala</h2><p>An invitation-only gathering connecting influential African leaders and global changemakers.</p><span>London, UK</span><a class="button" href="contact-us.html">Request an Invitation</a></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div><a class="brand" href="../index.html"><b>N</b><span>NJC Global</span></a><p>Pioneering African excellence through high-impact talent execution and world-class media curation.</p></div>
+        <div><h3>Explore</h3><a href="services.html">Services</a><a href="about-us.html">About Us</a><a href="events.html">Events</a><a href="blog.html">Insights Blog</a></div>
+        <div><h3>Work With Us</h3><a href="contact-us.html#work-with-us">Talent Solutions</a><a href="contact-us.html#work-with-us">Strategic Advisory</a><a href="contact-us.html#work-with-us">Partnership Inquiries</a></div>
+        <form><h3>Stay Connected</h3><p>Join our inner circle for updates on African excellence.</p><label for="details-email">Email Address</label><div><input id="details-email" type="email" placeholder="Email Address" required><button type="submit" aria-label="Join newsletter">→</button></div></form>
+      </div>
+      <div class="container footer-bottom"><p>© 2026 NJC Global. All rights reserved.</p><p><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></p></div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector('.menu');
+      const navigation = document.querySelector('nav');
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        navigation.classList.toggle('open', !isOpen);
+        menuButton.firstElementChild.textContent = isOpen ? 'menu' : 'close';
+      });
+
+      document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        event.currentTarget.querySelector('button').textContent = '✓';
+        event.currentTarget.querySelector('input').value = '';
+      });
+    </script>
+  </body>
+</html>
