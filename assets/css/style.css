@@ -4331,3 +4331,139 @@ body>footer form button .material-symbols-outlined {
     width: 110px
   }
 }
+
+/* Shared page and resource loading feedback */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  visibility: hidden;
+  background: rgba(248,245,237,.94);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition: opacity .24s ease, visibility .24s ease
+}
+
+.page-loader.is-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto
+}
+
+.page-loader-panel {
+  display: grid;
+  min-width: 220px;
+  justify-items: center;
+  gap: 15px;
+  padding: 28px 30px;
+  border: 1px solid rgba(20,53,44,.1);
+  border-radius: 22px;
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 24px 65px rgba(6,44,34,.12)
+}
+
+.page-loader-mark {
+  position: relative;
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  background: conic-gradient(from 0deg, var(--green), var(--brand-yellow), var(--green));
+  animation: loader-mark-turn 1.35s linear infinite
+}
+
+.page-loader-mark:before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 11px;
+  background: var(--cream)
+}
+
+.page-loader-mark:after {
+  content: '';
+  position: absolute;
+  inset: 15px;
+  border-radius: 5px;
+  background: var(--green)
+}
+
+.page-loader-label {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase
+}
+
+.page-loader-progress {
+  width: 145px;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(20,53,44,.12)
+}
+
+.page-loader-progress i {
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brand-yellow);
+  animation: loader-progress 1.15s ease-in-out infinite
+}
+
+img.resource-loading {
+  background: linear-gradient(105deg, #e8e4dc 25%, #f8f5ed 45%, #e8e4dc 65%);
+  background-size: 220% 100%;
+  opacity: .72;
+  animation: resource-shimmer 1.35s ease infinite
+}
+
+img.resource-loaded {
+  opacity: 1;
+  transition: opacity .35s ease
+}
+
+@keyframes loader-mark-turn {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes loader-progress {
+  0% {
+    transform: translateX(-120%)
+  }
+
+  55%, 100% {
+    transform: translateX(245%)
+  }
+}
+
+@keyframes resource-shimmer {
+  to {
+    background-position: -220% 0
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .page-loader,
+  .page-loader-mark,
+  .page-loader-progress i,
+  img.resource-loading,
+  img.resource-loaded {
+    animation: none;
+    transition: none
+  }
+}
+
+@media print {
+  .page-loader {
+    display: none !important
+  }
+}
