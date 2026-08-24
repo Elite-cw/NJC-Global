@@ -109,11 +109,14 @@ main input, main textarea, main select {
 }
 
 body>footer .brand-logo {
+  position: relative;
+  z-index: 1;
   width: 118px;
   overflow: hidden;
   border-radius: 10px;
-  background-color: #ffffff;
-  background-image: url('../images/njc-global.png')
+  background-color: #f6f4f0;
+  background-image: url('../images/njc-global.png');
+  transform: translateY(36px)
 }
 
 .brand b {
@@ -837,7 +840,7 @@ body>footer {
 
 body>footer .footer-grid>div:first-child {
   position: relative;
-  padding-top: 112px
+  padding-top: 92px
 }
 
 body>footer .footer-grid>div:first-child>.brand {
@@ -850,9 +853,9 @@ body>footer .footer-grid>div:first-child>.brand {
   padding: 18px 18px 35px;
   justify-content: center;
   align-items: flex-start;
-  border-radius: 0 0 18px 18px;
-  background: #ffffff;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+  background: #f6f4f0;
   filter: drop-shadow(0 14px 20px rgba(0,0,0,.16))
 }
 
@@ -4269,7 +4272,7 @@ body>footer form button .material-symbols-outlined {
   }
 
   body>footer .footer-grid>div:first-child {
-    padding-top: 112px
+    padding-top: 92px
   }
 
   body>footer .footer-grid>div:first-child>.brand {
