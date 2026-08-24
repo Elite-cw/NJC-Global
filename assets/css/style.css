@@ -109,7 +109,11 @@ main input, main textarea, main select {
 }
 
 body>footer .brand-logo {
-  width: 118px
+  width: 118px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #ffffff;
+  background-image: url('../images/njc-global.png')
 }
 
 .brand b {
