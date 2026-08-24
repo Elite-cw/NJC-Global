@@ -4,7 +4,13 @@
   --green2: #0b684f;
   --cream: #f8f5ed;
   --sand: #eae3d4;
-  --gold: #b67d35;
+  --brand-yellow: #feaf35;
+  --brand-yellow-deep: #b67d35;
+  --brand-yellow-muted: #d8b37a;
+  --brand-yellow-soft: #f7e4c4;
+  --brand-yellow-wash: #fff8ec;
+  --brand-yellow-glow: rgba(254,175,53,.18);
+  --gold: var(--brand-yellow-deep);
   --muted: #64716c;
   --line: rgba(20,53,44, .16);
   --serif: 'Playfair Display', serif;
@@ -86,9 +92,24 @@ main input, main textarea, main select {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0;
   white-space: nowrap;
   font: 600 20px var(--serif)
+}
+
+.brand-logo {
+  display: block;
+  width: 104px;
+  aspect-ratio: 825 / 629;
+  flex: 0 0 auto;
+  background-image: url('../images/njc-global_(no-bg).png');
+  background-repeat: no-repeat;
+  background-position: 49% 55.5%;
+  background-size: 150% auto
+}
+
+body>footer .brand-logo {
+  width: 118px
 }
 
 .brand b {
@@ -187,18 +208,47 @@ nav a:hover:after, nav a.active:after {
 }
 
 .button:not(:has(.material-symbols-outlined)):after {
-  content: '↗';
+  content: 'chevron_right';
   position: relative;
   z-index: 1;
   display: inline-block;
-  font-size: 17px;
-  font-weight: 500;
+  width: auto;
+  height: auto;
+  border: 0;
+  font-family: 'Material Symbols Outlined';
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
   transition: transform .35s ease
 }
 
 .button:not(:has(.material-symbols-outlined)):hover:after {
-  transform: translate(3px, -3px)
+  transform: translateX(4px)
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.35em;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga'
 }
 
 .button:hover {
@@ -485,10 +535,15 @@ h1 em {
 .cards {
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  align-items: start;
   gap: 24px
 }
 
 .cards article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 608px;
   background: white;
   border-radius: 24px;
   overflow: hidden;
@@ -508,6 +563,7 @@ h1 em {
 }
 
 .card-img {
+  flex: 0 0 235px;
   height: 235px;
   overflow: hidden;
   background-size: cover;
@@ -528,6 +584,9 @@ h1 em {
 
 .card-copy {
   position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 29px
 }
 
@@ -561,7 +620,8 @@ h1 em {
 
 .card-copy a {
   display: block;
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 20px;
   color: var(--gold);
   font-size: 11px;
   font-weight: 700;
@@ -778,7 +838,7 @@ body>footer {
 
 footer h3 {
   margin: 0 0 18px;
-  color: #d8b37a;
+  color: #feaf35;
   font: 700 11px var(--sans);
   letter-spacing: .16em;
   text-transform: uppercase
@@ -946,6 +1006,11 @@ nav a:after {
 
 .cards {
   grid-template-columns: 1fr
+}
+
+.cards article {
+  height: auto;
+  min-height: 0
 }
 
 .cards .featured {
@@ -4114,3 +4179,109 @@ nav a:after {
 .contact-community form small { color:var(--muted); text-align:center }
 @media(max-width:980px){.contact-hero-heading,.contact-main-grid,.contact-community-inner{grid-template-columns:1fr}.contact-hero-heading{gap:25px}.contact-main-grid{gap:55px}.contact-information{margin-top:0}.contact-image-card{max-width:650px}.contact-proof-grid{grid-template-columns:1fr 1fr}.contact-work-cta>.container{grid-template-columns:auto 1fr}.contact-work-cta .button{grid-column:2;justify-self:start}}
 @media(max-width:680px){.contact-hero{padding:65px 0 45px}.contact-hero h1{font-size:45px}.contact-main{padding-bottom:80px}.contact-form-panel{padding:26px}.contact-field-grid{grid-template-columns:1fr}.contact-form-actions{align-items:flex-start;flex-direction:column}.contact-information{gap:38px}.contact-image-card{min-height:380px}.contact-email-grid,.contact-proof-grid,.contact-proof-stats{grid-template-columns:1fr}.contact-proof-stats div{padding:18px;border-right:0;border-bottom:1px solid var(--line)}.contact-proof-stats div:last-child{border-bottom:0}.contact-work-cta>.container{grid-template-columns:1fr}.contact-work-cta .button{grid-column:auto}.contact-community{padding:75px 0}}
+
+/* Shared small-screen stability across every page */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%
+}
+
+body {
+  overflow-x: clip
+}
+
+body>footer form button .material-symbols-outlined {
+  display: block;
+  color: inherit;
+  font-size: 21px
+}
+
+@media(max-width: 760px) {
+  .site-header,
+  .nav-wrap {
+    width: 100%
+  }
+
+  .site-header nav {
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px
+  }
+
+  .brand-logo {
+    width: 88px
+  }
+
+  main,
+  main>section,
+  main article,
+  main form,
+  main div {
+    min-width: 0
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    overflow-wrap: anywhere
+  }
+
+  .button {
+    max-width: 100%;
+    min-height: 46px;
+    white-space: normal;
+    text-align: center
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 34px
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px
+  }
+
+  .footer-bottom a {
+    margin: 0 18px 0 0
+  }
+
+  .contact-main-email {
+    font-size: clamp(22px, 7vw, 31px)
+  }
+}
+
+@media(max-width: 420px) {
+  .container {
+    width: calc(100% - 28px)
+  }
+
+  .nav-wrap {
+    height: 66px
+  }
+
+  .site-header nav {
+    top: 66px;
+    left: 14px;
+    right: 14px
+  }
+
+  .brand-logo {
+    width: 82px
+  }
+
+  h1 {
+    font-size: clamp(37px, 12vw, 43px)
+  }
+
+  body>footer {
+    padding-top: 58px
+  }
+}

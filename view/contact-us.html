@@ -14,8 +14,8 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="../index.html">
-          <b>N</b>
-          <span>NJC Global</span>
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="sr-only">NJC Global</span>
         </a>
 
         <button class="menu" aria-expanded="false" aria-controls="nav">
@@ -111,11 +111,11 @@
             <div class="contact-details">
               <div>
                 <p class="eyebrow">Direct inquiries</p>
-                <a class="contact-main-email" href="mailto:hello@njcglobal.com">hello@njcglobal.com</a>
+                <a class="contact-main-email" href="mailto:info@njcglobal.site">info@njcglobal.site</a>
               </div>
               <div class="contact-email-grid">
-                <div><h2>Talent &amp; Partnerships</h2><a href="mailto:partners@njcglobal.com">partners@njcglobal.com</a></div>
-                <div><h2>Media Relations</h2><a href="mailto:press@njcglobal.com">press@njcglobal.com</a></div>
+                <div><h2>Talent &amp; Partnerships</h2><a href="mailto:info@njcglobal.site">info@njcglobal.site</a></div>
+                <div><h2>Media Relations</h2><a href="mailto:info@njcglobal.site">info@njcglobal.site</a></div>
               </div>
               <div>
                 <p class="eyebrow">Social</p>
@@ -165,10 +165,10 @@
 
     <footer>
       <div class="container footer-grid">
-        <div><a class="brand" href="../index.html"><b>N</b><span>NJC Global</span></a><p>Pioneering African excellence through media, events, and talent execution.</p></div>
+        <div><a class="brand" href="../index.html"><span class="brand-logo" aria-hidden="true"></span><span class="sr-only">NJC Global</span></a><p>Pioneering African excellence through media, events, and talent execution.</p></div>
         <div><h3>Explore</h3><a href="services.html">Services</a><a href="about-us.html">About us</a><a href="events.html">Events</a></div>
-        <div><h3>Connect</h3><a href="mailto:hello@njcglobal.com">Email</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
-        <form class="footer-contact-subscribe"><h3>Stay in the loop</h3><label for="contact-footer-email">Email address</label><div><input id="contact-footer-email" type="email" placeholder="Your email address" required><button aria-label="Subscribe">→</button></div></form>
+        <div><h3>Connect</h3><a href="mailto:info@njcglobal.site">info@njcglobal.site</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+        <form class="footer-contact-subscribe"><h3>Stay in the loop</h3><label for="contact-footer-email">Email address</label><div><input id="contact-footer-email" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button></div></form>
       </div>
       <div class="container footer-bottom"><p>© 2026 NJC Global. All rights reserved.</p><p><a href="#">Privacy</a><a href="#">Terms</a></p></div>
     </footer>
@@ -216,7 +216,7 @@
       document.querySelectorAll('#community-form, .footer-contact-subscribe').forEach((form) => {
         form.addEventListener('submit', (event) => {
           event.preventDefault();
-          form.querySelector('button').textContent = 'Joined ✓';
+          form.querySelector('button').textContent = 'Joined';
           form.querySelector('input').value = '';
         });
       });

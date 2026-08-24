@@ -15,8 +15,8 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#home">
-          <b>N</b>
-          <span>NJC Global</span>
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="sr-only">NJC Global</span>
         </a>
         <button class="menu" aria-expanded="false" aria-controls="nav">
           <span class="material-symbols-outlined">menu</span>
@@ -136,8 +136,8 @@
       <div class="container footer-grid">
         <div>
           <a class="brand" href="#home">
-            <b>N</b>
-            <span>NJC Global</span>
+            <span class="brand-logo" aria-hidden="true"></span>
+            <span class="sr-only">NJC Global</span>
           </a>
           <p>Pioneering African excellence through media, events, and talent execution.</p>
         </div>
@@ -149,7 +149,7 @@
         </div>
         <div>
           <h3>Connect</h3>
-          <a href="mailto:hello@njcglobal.com">Email</a>
+          <a href="mailto:info@njcglobal.site">info@njcglobal.site</a>
           <a href="#">LinkedIn</a>
           <a href="#">Instagram</a>
         </div>
@@ -158,7 +158,7 @@
           <label for="email">Email address</label>
           <div>
             <input id="email" type="email" placeholder="Your email address" required>
-            <button aria-label="Subscribe">→</button>
+            <button type="submit" aria-label="Subscribe"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
           </div>
         </form>
       </div>
@@ -197,7 +197,7 @@
           const button = event.currentTarget.querySelector('button');
           const input = event.currentTarget.querySelector('input');
 
-          button.textContent = 'Subscribed ✓';
+          button.textContent = 'Subscribed';
           input.value = '';
         });
       });
