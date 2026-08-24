@@ -111,7 +111,7 @@ main input, main textarea, main select {
 body>footer .brand-logo {
   width: 118px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #ffffff;
   background-image: url('../images/njc-global.png')
 }
@@ -833,6 +833,27 @@ body>footer {
   display: grid;
   grid-template-columns: 1.5fr .7fr .7fr 1.2fr;
   gap: 60px
+}
+
+body>footer .footer-grid>div:first-child {
+  position: relative;
+  padding-top: 112px
+}
+
+body>footer .footer-grid>div:first-child>.brand {
+  position: absolute;
+  top: -75px;
+  left: 0;
+  display: flex;
+  width: 154px;
+  height: 164px;
+  padding: 18px 18px 35px;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 0 0 18px 18px;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
+  filter: drop-shadow(0 14px 20px rgba(0,0,0,.16))
 }
 
 .footer-grid>div:first-child p {
@@ -4247,6 +4268,14 @@ body>footer form button .material-symbols-outlined {
     gap: 34px
   }
 
+  body>footer .footer-grid>div:first-child {
+    padding-top: 112px
+  }
+
+  body>footer .footer-grid>div:first-child>.brand {
+    top: -75px
+  }
+
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
@@ -4287,5 +4316,15 @@ body>footer form button .material-symbols-outlined {
 
   body>footer {
     padding-top: 58px
+  }
+
+  body>footer .footer-grid>div:first-child>.brand {
+    top: -58px;
+    width: 146px;
+    height: 156px
+  }
+
+  body>footer .brand-logo {
+    width: 110px
   }
 }
