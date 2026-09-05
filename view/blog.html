@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260824-2">
-    <script src="../assets/js/site.js?v=20260824-1" defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260904-7">
+    <script src="../assets/js/site.js?v=20260904-4" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -41,35 +41,41 @@
           <article class="featured-blog-card">
             <div class="featured-blog-image" role="img" aria-label="African business leader overlooking a modern city"></div>
             <div class="featured-blog-copy">
-              <div class="blog-meta"><span>Leadership</span><small><i class="material-symbols-outlined">schedule</i> 8 min read</small></div>
-              <h2>The New Vanguard: Architecting Sustainable Growth in Emerging Markets</h2>
-              <p>As global supply chains realign, a new generation of African executives are rewriting the rules of engagement, blending deep local context with world-class operational rigor to build resilient enterprises.</p>
+              <div class="blog-meta"><span>Insights</span><small><i class="material-symbols-outlined">schedule</i> 7 min read</small></div>
+              <h2>Amplifying African Excellence: Your Path to Global Visibility</h2>
+              <p>Why visibility matters, how strategic storytelling creates opportunity, and the connected services that help African professionals and organizations stand out globally.</p>
               <div class="blog-author-row">
-                <div class="blog-author"><span>AD</span><p><strong>Aminata Diallo</strong><small>Senior Editor</small></p></div>
-                <a class="text-link" href="#latest-dispatches">Read story →</a>
+                <div class="blog-author"><span>JN</span><p><strong>Joyce Chiamaka Nwezeh</strong><small>Founder, NJC Global</small></p></div>
+                <a class="text-link" href="amplifying-african-excellence.html">Read story →</a>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="blog-tools" aria-label="Blog filters">
-        <div class="container blog-tools-inner">
-          <div class="blog-categories" role="group" aria-label="Filter articles by category">
-            <button class="active" type="button" data-filter="all">All Articles</button>
-            <button type="button" data-filter="insights">Insights</button>
-            <button type="button" data-filter="pan-african">Pan-African Stories</button>
-            <button type="button" data-filter="events">Events</button>
-            <button type="button" data-filter="leadership">Leadership</button>
-            <button type="button" data-filter="culture">Culture</button>
-          </div>
-          <label class="blog-search"><span class="material-symbols-outlined">search</span><span class="sr-only">Search the blog archive</span><input id="blog-search" type="search" placeholder="Search the archive..." autocomplete="off"></label>
-        </div>
-      </section>
-
       <section class="blog-dispatches" id="latest-dispatches">
         <div class="container">
           <header class="blog-section-heading"><div><p class="eyebrow">Fresh perspectives</p><h2>Latest Dispatches</h2></div><span>Updated weekly</span></header>
+
+          <div class="blog-tools" aria-label="Browse and search articles">
+            <div class="blog-tools-inner">
+              <div class="blog-categories" role="group" aria-label="Filter articles by category">
+                <span class="blog-filter-indicator" aria-hidden="true"></span>
+                <button class="active" type="button" data-filter="all">All Articles</button>
+                <button type="button" data-filter="insights">Insights</button>
+                <button type="button" data-filter="pan-african">Pan-African Stories</button>
+                <button type="button" data-filter="events">Events</button>
+                <button type="button" data-filter="leadership">Leadership</button>
+                <button type="button" data-filter="culture">Culture</button>
+              </div>
+              <label class="blog-search">
+                <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                <span class="sr-only">Search the blog archive</span>
+                <input id="blog-search" type="search" placeholder="Search articles..." autocomplete="off">
+              </label>
+            </div>
+          </div>
+
           <div class="blog-grid" id="blog-grid">
             <article class="blog-card" data-category="culture" data-search="weaving future business contemporary african art david osei culture">
               <div class="blog-card-image blog-art-image"><span>Culture</span></div>
@@ -143,12 +149,25 @@
       const menuButton = document.querySelector('.menu');
       const navigation = document.querySelector('#nav');
       const filterButtons = [...document.querySelectorAll('[data-filter]')];
+      const filterBar = document.querySelector('.blog-categories');
+      const filterIndicator = document.querySelector('.blog-filter-indicator');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const searchInput = document.querySelector('#blog-search');
       const articles = [...document.querySelectorAll('#blog-grid > [data-category]')];
       const emptyState = document.querySelector('#blog-empty');
       const loadMoreButton = document.querySelector('#blog-load-more');
       let activeCategory = 'all';
       let showAllArticles = false;
+
+      function moveFilterIndicator(button, shouldScroll = false) {
+        filterIndicator.style.width = `${button.offsetWidth}px`;
+        filterIndicator.style.transform = `translateX(${button.offsetLeft}px)`;
+        filterBar.classList.add('indicator-ready');
+
+        if (shouldScroll) {
+          button.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
 
       function updateArticles() {
         const query = searchInput.value.trim().toLowerCase();
@@ -169,10 +188,15 @@
         activeCategory = button.dataset.filter;
         showAllArticles = false;
         filterButtons.forEach((item) => item.classList.toggle('active', item === button));
+        moveFilterIndicator(button, true);
         updateArticles();
       }));
       searchInput.addEventListener('input', () => { showAllArticles = false; updateArticles(); });
       loadMoreButton.addEventListener('click', () => { showAllArticles = true; updateArticles(); });
+      window.addEventListener('resize', () => {
+        moveFilterIndicator(filterButtons.find((button) => button.classList.contains('active')));
+      });
+      moveFilterIndicator(filterButtons.find((button) => button.classList.contains('active')));
 
       const audioButton = document.querySelector('.audio-toggle');
       const audioProgress = document.querySelector('.audio-track i');

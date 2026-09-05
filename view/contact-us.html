@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260824-2">
-    <script src="../assets/js/site.js?v=20260824-1" defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260904-7">
+    <script src="../assets/js/site.js?v=20260904-4" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -120,6 +120,15 @@
                 <div><h2>Talent &amp; Partnerships</h2><a href="mailto:info@njcglobal.site">info@njcglobal.site</a></div>
                 <div><h2>Media Relations</h2><a href="mailto:info@njcglobal.site">info@njcglobal.site</a></div>
               </div>
+              <div class="contact-location-card">
+                <iframe title="Map showing NJC Global's base in Nigeria" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=2.6%2C4.0%2C14.7%2C13.9&amp;layer=mapnik"></iframe>
+                <div class="contact-location-copy">
+                  <p class="eyebrow">Our base</p>
+                  <strong>Nigeria · Working across Africa</strong>
+                  <a href="tel:+2347013158699">+234 701 315 8699</a>
+                  <a href="mailto:info@njcglobal.site">info@njcglobal.site</a>
+                </div>
+              </div>
               <div>
                 <p class="eyebrow">Social</p>
                 <div class="contact-socials"><a href="#" aria-label="LinkedIn">IN</a><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="X">X</a></div>
@@ -129,17 +138,73 @@
         </div>
       </section>
 
-      <section id="testimonials">
+      <section id="testimonials" class="testimonial-section">
         <div class="container">
-          <header class="contact-section-heading">
-            <p class="eyebrow">Trusted across the continent</p>
-            <h2>Partnerships built on precision, trust, and visible impact.</h2>
-          </header>
+          <div class="testimonial-showcase" data-testimonial-slider>
+            <header class="testimonial-intro">
+              <span class="material-symbols-outlined testimonial-mark" aria-hidden="true">format_quote</span>
+              <p class="eyebrow">Client testimonials</p>
+              <h2>What our partners are saying.</h2>
+              <p>Trusted reflections from leaders across our continental network.</p>
 
-          <div class="contact-proof-grid">
-            <article><span class="material-symbols-outlined">format_quote</span><blockquote>NJC Global brings rare clarity to complex projects. Every moving part—from positioning to execution—was handled with intention.</blockquote><footer><strong>Amara Okafor</strong><small>Executive Director, Elevate Africa</small></footer></article>
-            <article><span class="material-symbols-outlined">format_quote</span><blockquote>The team understood the room we wanted to create and delivered an event experience that felt polished, relevant, and unmistakably African.</blockquote><footer><strong>Kwame Mensah</strong><small>Programme Lead, Africa Forward</small></footer></article>
-            <article><span class="material-symbols-outlined">format_quote</span><blockquote>From narrative strategy to media visibility, NJC Global helped us communicate our value with confidence and reach the right audience.</blockquote><footer><strong>Njeri Kamau</strong><small>Founder, Kijani Ventures</small></footer></article>
+              <div class="testimonial-controls" aria-label="Testimonial navigation">
+                <button type="button" data-testimonial-direction="previous" aria-label="View previous testimonial">
+                  <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                </button>
+                <span aria-hidden="true"></span>
+                <button type="button" data-testimonial-direction="next" aria-label="View next testimonial">
+                  <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                </button>
+              </div>
+            </header>
+
+            <div class="testimonial-viewport" tabindex="0" aria-label="Client testimonials">
+              <div class="testimonial-track">
+                <article class="testimonial-slide">
+                  <div class="testimonial-bubble">
+                    <blockquote>“Joyce brings people together and organises impactful events across Africa with grace, precision, and heart.”</blockquote>
+                    <span class="testimonial-stars" aria-label="Five out of five stars">★★★★★</span>
+                  </div>
+                  <footer class="testimonial-author">
+                    <span class="testimonial-avatar" aria-hidden="true">AM</span>
+                    <span><strong>Angeline Mhlanga</strong><small>Country Head, CBW Zimbabwe</small></span>
+                  </footer>
+                </article>
+
+                <article class="testimonial-slide">
+                  <div class="testimonial-bubble">
+                    <blockquote>“NJC Global brings rare clarity to complex projects. Every moving part—from positioning to execution—was handled with intention.”</blockquote>
+                    <span class="testimonial-stars" aria-label="Five out of five stars">★★★★★</span>
+                  </div>
+                  <footer class="testimonial-author">
+                    <span class="testimonial-avatar" aria-hidden="true">AO</span>
+                    <span><strong>Amara Okafor</strong><small>Executive Director, Elevate Africa</small></span>
+                  </footer>
+                </article>
+
+                <article class="testimonial-slide">
+                  <div class="testimonial-bubble">
+                    <blockquote>“The team delivered an event experience that felt polished, relevant, and unmistakably African.”</blockquote>
+                    <span class="testimonial-stars" aria-label="Five out of five stars">★★★★★</span>
+                  </div>
+                  <footer class="testimonial-author">
+                    <span class="testimonial-avatar" aria-hidden="true">KM</span>
+                    <span><strong>Kwame Mensah</strong><small>Programme Lead, Africa Forward</small></span>
+                  </footer>
+                </article>
+
+                <article class="testimonial-slide">
+                  <div class="testimonial-bubble">
+                    <blockquote>“NJC Global helped us communicate our value with confidence and reach the right audience.”</blockquote>
+                    <span class="testimonial-stars" aria-label="Five out of five stars">★★★★★</span>
+                  </div>
+                  <footer class="testimonial-author">
+                    <span class="testimonial-avatar" aria-hidden="true">NK</span>
+                    <span><strong>Njeri Kamau</strong><small>Founder, Kijani Ventures</small></span>
+                  </footer>
+                </article>
+              </div>
+            </div>
           </div>
 
           <dl class="contact-proof-stats">
