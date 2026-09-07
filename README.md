@@ -105,6 +105,16 @@ The supplied official brand colors are:
 
 These colors are reference tokens for selective use when a section or component is explicitly designated. The website currently retains its earlier working palette until those placements are specified.
 
+### Yellow contrast rules
+
+| Token | Hex | Use |
+| --- | --- | --- |
+| `--brand-yellow` | `#FEAF35` | Bright accent on dark green, or a filled accent paired with dark text |
+| `--brand-yellow-deep` | `#B67D35` | Icons, links, and short labels on white, cream, or other light surfaces |
+| `--brand-yellow-light` | `#FFCF88` | Supporting accent on the darkest green surfaces only |
+
+Always choose the accent after checking its immediate background. Keep bright yellow off light surfaces, avoid white text on bright yellow, and use a component-specific selector instead of changing a shared color token to recolor one element.
+
 ## Adding images
 
 Place general local images in:

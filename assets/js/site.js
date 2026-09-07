@@ -21,7 +21,7 @@
     dropdown.innerHTML = `
       <button class="nav-dropdown-trigger${onProjectsPage || onEventsPage ? ' active' : ''}" type="button" aria-expanded="false" aria-controls="${menuId}">
         <span>Explore</span>
-        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_down</span>
+        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
       </button>
       <div class="nav-dropdown-menu" id="${menuId}" aria-hidden="true">
         <a class="nav-dropdown-link${onProjectsPage ? ' active' : ''}" href="${pagePrefix}projects.html"${onProjectsPage ? ' aria-current="page"' : ''}>
