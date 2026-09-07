@@ -4,6 +4,95 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isViewPage = window.location.pathname.includes('/view/');
   const pagePrefix = isViewPage ? '' : 'view/';
+  const assetPrefix = isViewPage ? '../' : '';
+
+  const peopleDirectory = Object.freeze({
+    team: [
+      {
+        id: 'team-joyce-chiamaka-nwezeh',
+        name: 'Joyce Chiamaka Nwezeh',
+        role: 'Founder & Managing Partner',
+        image: 'assets/images/team/joycepic1.jpg',
+        imageAlt: 'Portrait of Joyce Chiamaka Nwezeh',
+        width: 4016,
+        height: 5572
+      },
+      {
+        id: 'team-daniel-friday',
+        name: 'Daniel Friday',
+        role: 'Team',
+        image: 'assets/images/team/daniel-friday.png',
+        imageAlt: 'Profile placeholder for Daniel Friday',
+        width: 1254,
+        height: 1254
+      },
+      {
+        id: 'team-daniel-nwezeh',
+        name: 'Daniel Nwezeh',
+        role: 'Team',
+        image: 'assets/images/team/daniel-nwezeh.png',
+        imageAlt: 'Profile placeholder for Daniel Nwezeh',
+        width: 1254,
+        height: 1254
+      }
+    ],
+    partners: [
+      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Partner' },
+      { id: 'partner-abongwa-celestine', name: 'Abongwa Celestine', role: 'Partner' }
+    ]
+  });
+
+  function renderPortrait(person, className) {
+    if (person.image) {
+      return `
+        <span class="${className} has-image">
+          <img src="${assetPrefix}${person.image}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy">
+        </span>
+      `;
+    }
+
+    return `
+      <span class="${className}" role="img" aria-label="Profile icon for ${person.name}">
+        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+      </span>
+    `;
+  }
+
+  const teamTree = document.querySelector('[data-team-tree]');
+
+  if (teamTree) {
+    const [leader, ...teamMembers] = peopleDirectory.team;
+    const renderTreePerson = (person, isLeader = false) => `
+      <a class="team-tree-person${isLeader ? ' team-tree-lead' : ''}" href="view/about-us.html#${person.id}"${isLeader ? '' : ' role="listitem"'}>
+        ${renderPortrait(person, 'team-tree-portrait')}
+        <span class="team-tree-copy">
+          <strong>${person.name}</strong>
+          <small>${person.role}</small>
+        </span>
+      </a>
+    `;
+
+    teamTree.innerHTML = `
+      ${renderTreePerson(leader, true)}
+      <div class="team-tree-branches" role="list">
+        ${teamMembers.map((person) => renderTreePerson(person)).join('')}
+      </div>
+    `;
+  }
+
+  document.querySelectorAll('[data-people-group]').forEach((grid) => {
+    const people = peopleDirectory[grid.dataset.peopleGroup] || [];
+
+    grid.innerHTML = people.map((person) => `
+      <article class="team-member-card" id="${person.id}">
+        ${renderPortrait(person, 'team-member-portrait')}
+        <div class="team-member-copy">
+          <small>${person.role}</small>
+          <h3>${person.name}</h3>
+        </div>
+      </article>
+    `).join('');
+  });
 
   const navigation = document.querySelector('#nav');
 
