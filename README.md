@@ -31,7 +31,6 @@ NJC/
 │   ├── events.html
 │   ├── privacy.html
 │   ├── projects.html
-│   ├── services.html
 │   └── terms.html
 ├── 404.html
 ├── index.html
@@ -42,7 +41,6 @@ NJC/
 
 - `index.html` — homepage and primary landing page.
 - `view/about-us.html` — company story, ecosystem, leadership, and mission.
-- `view/services.html` — services, delivery process, and service calls to action.
 - `view/projects.html` — filterable collaboration portfolio, testimonials, and project inquiry form.
 - `view/events.html` — searchable and filterable event directory.
 - `view/event-details.html` — detailed event information.
