@@ -1,0 +1,84 @@
+/*
+Theme Name: NJC Global Editable
+Theme URI: https://www.njcglobal.site/
+Author: NJC Global
+Description: A custom, installable WordPress theme preserving the NJC Global static-site design while adding safe editorial templates for posts and events.
+Version: 0.2.0
+Requires at least: 6.5
+Requires PHP: 8.1
+Text Domain: njc-global
+*/
+
+/* WordPress-only compatibility rules. The original visual system lives in assets/css/site.css. */
+.admin-bar .site-header {
+  top: 32px;
+}
+
+.njc-notice {
+  margin: 0;
+  padding: 14px 20px;
+  background: #fff7d6;
+  color: #14352c;
+  text-align: center;
+}
+
+.njc-form-trap {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.pagination .page-numbers {
+  display: grid;
+  min-width: 44px;
+  min-height: 44px;
+  place-items: center;
+  border: 1px solid rgba(20, 53, 44, .18);
+  border-radius: 999px;
+}
+
+.pagination .current {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+
+.compact-event-thumb:not([style]),
+.event-detail-image:not([style]) {
+  background:
+    linear-gradient(135deg, rgba(6, 78, 59, .3), rgba(213, 168, 75, .24)),
+    #14352c;
+}
+
+.entry-content > * {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.entry-content > .alignwide {
+  max-width: 1120px;
+}
+
+.entry-content > .alignfull {
+  max-width: none;
+}
+
+.njc-editor-page {
+  min-height: 60vh;
+}
+
+@media (max-width: 782px) {
+  .admin-bar .site-header {
+    top: 46px;
+  }
+}

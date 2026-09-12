@@ -1,0 +1,318 @@
+<main class="about-page">
+      <section class="about-hero">
+        <div class="container about-hero-grid">
+          <div class="about-hero-copy">
+            <h1>Building the Bridge for <em>African Impact</em>.</h1>
+            <p>We connect African talent, events, and stories with the platforms they need to grow.</p>
+            <div class="story-marker" aria-hidden="true"><span>Discover Our Story</span><i></i></div>
+          </div>
+          <div class="about-hero-image" aria-label="NJC Global events, women leaders, and multigenerational professionals collaborating">
+            <div class="about-photo-card about-photo-women" role="img" aria-label="African women participating in a professional conference"></div>
+            <div class="about-photo-card about-photo-event" role="img" aria-label="Speaker addressing an audience at an African business event"></div>
+            <div class="about-photo-card about-photo-boardroom" role="img" aria-label="Young and senior African professionals collaborating around a boardroom table"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section genesis">
+        <div class="container split-layout">
+          <div class="section-intro">
+            <p class="eyebrow">Our Genesis</p>
+            <h2>The space between potential and execution is where we operate.</h2>
+          </div>
+          <div class="genesis-copy">
+            <p>Africa has exceptional talent and ideas. NJC Global brings the people, story, and execution together so that potential can become visible, measurable impact.</p>
+            <div class="value-cards">
+              <article><span class="material-symbols-outlined">insights</span><h3>Insight</h3><p>Cultural fluency with global standards.</p></article>
+              <article><span class="material-symbols-outlined">precision_manufacturing</span><h3>Execution</h3><p>Reliable delivery across every touchpoint.</p></article>
+              <article><span class="material-symbols-outlined">visibility</span><h3>Visibility</h3><p>Stories that make valuable work easier to trust.</p></article>
+              <article><span class="material-symbols-outlined">hub</span><h3>Connection</h3><p>Relevant people, platforms, and opportunities.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section ecosystem">
+        <div class="container">
+          <div class="center-heading"><p class="eyebrow">The Nexus</p><h2>A Unified Ecosystem</h2></div>
+          <div class="ecosystem-row">
+            <article><span class="material-symbols-outlined">newspaper</span><h3>Media</h3><p>Curating the narrative of African excellence.</p></article>
+            <i></i>
+            <article class="ecosystem-featured"><span class="material-symbols-outlined">timer_arrow_up</span><h3>Events</h3><p>Orchestrating high-impact global gatherings.</p></article>
+            <i></i>
+            <article><span class="material-symbols-outlined">groups</span><h3>Talent</h3><p>Sourcing and managing visionary leaders.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section leadership" id="leadership">
+        <div class="container leadership-grid">
+          <div class="founder-portrait">
+            <img src="../assets/images/team/joycepic1.jpg" alt="Portrait of Joyce Chiamaka Nwezeh, Founder and Managing Partner" width="4016" height="5572">
+            <div class="founder-label"><strong>Joyce Chiamaka Nwezeh</strong><span>Founder &amp; Managing Partner</span></div>
+          </div>
+          <div class="leadership-copy">
+            <p class="eyebrow">Leadership</p>
+            <h2>Guiding the narrative of <em>Pan-African</em> excellence.</h2>
+            <p>Joyce Chiamaka Nwezeh built NJC Global to help African talent and ideas reach the global stage.</p>
+            <p>Her cross-market experience shapes the firm's focused approach to visibility, talent, and events.</p>
+            <a class="text-link" href="https://www.linkedin.com/company/njc-global/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span class="material-symbols-outlined inline-link-icon" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mission-vision">
+        <div class="container">
+          <article><h3>Our Mission</h3><p>To turn African talent and stories into visible, measurable impact.</p></article>
+          <article><h3>Our Vision</h3><p>A world where Pan-African ambition meets global opportunity.</p></article>
+        </div>
+        <div class="container about-impact-facts" aria-label="How the NJC Global network works">
+          <div><strong>Our goal</strong><span>Give African expertise the recognition it deserves.</span></div>
+          <div><strong>Connect</strong><span>Join the network, partner with us, or subscribe.</span></div>
+        </div>
+      </section>
+
+      <section class="about-section partners-showcase" id="partners" aria-labelledby="partners-title">
+        <div class="container">
+          <div class="partners-heading">
+            <div>
+              <p class="eyebrow">Partners &amp; Past Clients</p>
+              <h2 id="partners-title">Better outcomes are built <em>together</em>.</h2>
+            </div>
+            <p>Current partners and organizations whose work NJC Global has supported.</p>
+          </div>
+
+          <div class="partner-card-grid">
+            <article class="partner-profile-card partner-profile-card-a" id="partner-afrikafora">
+              <div class="partner-profile-top">
+                <span class="partner-profile-logo">
+                  <img src="../assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
+                </span>
+                <small>Culture &amp; trade · 01</small>
+              </div>
+              <div>
+                <h3>The AfrikaFora</h3>
+                <p>Connecting African culture, trade, and diaspora communities.</p>
+              </div>
+              <a href="#partner-afrikafora-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+            </article>
+
+            <article class="partner-profile-card partner-profile-card-b" id="partner-cbw-africa">
+              <div class="partner-profile-top">
+                <span class="partner-profile-logo">
+                  <img src="../assets/images/partners/cbw-africa-zimbabwe.jpg" alt="CBW Africa Zimbabwe Virtual Chapter logo">
+                </span>
+                <small>Business network · 02</small>
+              </div>
+              <div>
+                <h3>CBW Africa Zimbabwe</h3>
+                <p>Connecting Zimbabwean businesswomen across borders.</p>
+              </div>
+              <a href="#partner-cbw-africa-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+            </article>
+
+            <article class="partner-profile-card partner-profile-card-c" id="partner-nia-nexus">
+              <div class="partner-profile-top">
+                <span class="partner-profile-logo">
+                  <img src="../assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
+                </span>
+                <small>Culture &amp; commerce · 03</small>
+              </div>
+              <div>
+                <h3>Nia Nexus</h3>
+                <p>A home for African stories, culture, and commerce.</p>
+              </div>
+              <a href="#partner-nia-nexus-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+            </article>
+
+            <article class="partner-profile-card partner-profile-card-d" id="partner-renewberry">
+              <div class="partner-profile-top">
+                <span class="partner-profile-logo">
+                  <img src="../assets/images/partners/renewberry.png" alt="Renewberry logo">
+                </span>
+                <small>Digital media · 04</small>
+              </div>
+              <div>
+                <h3>Renewberry</h3>
+                <p>A platform for premium creator-led video.</p>
+              </div>
+              <a href="#partner-renewberry-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+            </article>
+
+            <article class="partner-profile-card partner-profile-card-e" id="partner-africa-women">
+              <div class="partner-profile-top">
+                <span class="partner-profile-logo">
+                  <img src="../assets/images/partners/africa-for-africa-women.png" alt="Africa for Africa Women's Conference logo">
+                </span>
+                <small>Past client · Women empowerment</small>
+              </div>
+              <div>
+                <h3>Africa for Africa Women</h3>
+                <p>Advancing women's leadership and economic opportunity.</p>
+              </div>
+              <a href="#partner-africa-women-details">View past client profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+            </article>
+          </div>
+
+          <div class="partner-detail-list" aria-label="Detailed partner and past client profiles">
+            <article class="partner-detail-panel" id="partner-afrikafora-details">
+              <div class="partner-detail-identity">
+                <span class="partner-detail-logo">
+                  <img src="../assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
+                </span>
+                <div>
+                  <small>Partner profile · 01</small>
+                  <h3>The AfrikaFora</h3>
+                  <p>Culture, trade, and diaspora engagement</p>
+                </div>
+              </div>
+              <div class="partner-detail-copy">
+                <p>The AfrikaFora connects African and diaspora communities through culture, trade, events, and strategic conversations.</p>
+                <div class="partner-detail-actions">
+                  <a class="button" href="https://theafrikafora.com/" target="_blank" rel="noopener noreferrer">Visit official website</a>
+                  <a class="text-link" href="#partner-afrikafora">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="partner-detail-panel" id="partner-cbw-africa-details">
+              <div class="partner-detail-identity">
+                <span class="partner-detail-logo">
+                  <img src="../assets/images/partners/cbw-africa-zimbabwe.jpg" alt="CBW Africa Zimbabwe Virtual Chapter logo">
+                </span>
+                <div>
+                  <small>Partner profile · 02</small>
+                  <h3>CBW Africa Zimbabwe</h3>
+                  <p>Women in business and leadership</p>
+                </div>
+              </div>
+              <div class="partner-detail-copy">
+                <p>CBW Africa Zimbabwe connects businesswomen through a virtual community for leadership, enterprise, and cross-border opportunity.</p>
+                <div class="partner-detail-actions">
+                  <a class="button" href="https://www.linkedin.com/company/cbw-africa-zimbabwe-virtual-chapter/" target="_blank" rel="noopener noreferrer">Visit official page</a>
+                  <a class="text-link" href="#partner-cbw-africa">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="partner-detail-panel" id="partner-nia-nexus-details">
+              <div class="partner-detail-identity">
+                <span class="partner-detail-logo">
+                  <img src="../assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
+                </span>
+                <div>
+                  <small>Partner profile · 03</small>
+                  <h3>Nia Nexus</h3>
+                  <p>Culture, stories, and African commerce</p>
+                </div>
+              </div>
+              <div class="partner-detail-copy">
+                <p>Nia Nexus brings African history, culture, stories, and products together in one accessible digital destination.</p>
+                <div class="partner-detail-actions">
+                  <a class="button" href="https://nianexus.africa/" target="_blank" rel="noopener noreferrer">Visit official website</a>
+                  <a class="text-link" href="#partner-nia-nexus">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="partner-detail-panel" id="partner-renewberry-details">
+              <div class="partner-detail-identity">
+                <span class="partner-detail-logo partner-detail-logo-wide">
+                  <img src="../assets/images/partners/renewberry.png" alt="Renewberry logo">
+                </span>
+                <div>
+                  <small>Partner profile · 04</small>
+                  <h3>Renewberry</h3>
+                  <p>Premium digital entertainment</p>
+                </div>
+              </div>
+              <div class="partner-detail-copy">
+                <p>Renewberry helps audiences discover curated, premium video content while giving creators a focused digital platform.</p>
+                <div class="partner-detail-actions">
+                  <a class="button" href="https://renewberry.io/" target="_blank" rel="noopener noreferrer">Visit official website</a>
+                  <a class="text-link" href="#partner-renewberry">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="partner-detail-panel" id="partner-africa-women-details">
+              <div class="partner-detail-identity">
+                <span class="partner-detail-logo">
+                  <img src="../assets/images/partners/africa-for-africa-women.png" alt="Africa for Africa Women's Conference logo">
+                </span>
+                <div>
+                  <small>Past client profile · 05</small>
+                  <h3>Africa for Africa Women</h3>
+                  <p>Leadership and economic empowerment</p>
+                </div>
+              </div>
+              <div class="partner-detail-copy">
+                <p>A past NJC Global client, Africa for Africa Women advances leadership and economic participation through mentorship, collaboration, conferences, and community.</p>
+                <div class="partner-detail-actions">
+                  <a class="button" href="https://africa4africawomen.org/" target="_blank" rel="noopener noreferrer">Visit official website</a>
+                  <a class="text-link" href="#partner-africa-women">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="partner-team-story" id="partner-team">
+            <div class="partner-team-label">
+              <span class="material-symbols-outlined" aria-hidden="true">handshake</span>
+              <small>Full partnership description</small>
+            </div>
+
+            <div class="partner-team-copy">
+              <h3>One team, many strengths.</h3>
+              <div>
+                <p>We combine strategy, storytelling, specialist knowledge, and trusted audiences to build work that travels beyond borders.</p>
+              </div>
+            </div>
+
+            <a class="text-link" href="contact-us.html#work-with-us">Explore a partnership with us <span class="material-symbols-outlined inline-link-icon" aria-hidden="true">arrow_forward</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section team-showcase" id="team" aria-labelledby="team-title">
+        <div class="container">
+          <div class="team-heading">
+            <div>
+              <p class="eyebrow">Our people</p>
+              <h2 id="team-title">The people behind the <em>connection</em>.</h2>
+            </div>
+            <p>Joyce leads a focused team supported by trusted partners.</p>
+          </div>
+
+          <div class="people-group" aria-labelledby="team-members-title">
+            <h3 class="people-group-title" id="team-members-title">Team</h3>
+            <div class="team-grid" data-people-group="team"></div>
+          </div>
+
+          <div class="people-group" aria-labelledby="partner-members-title">
+            <h3 class="people-group-title" id="partner-members-title">Partners</h3>
+            <div class="team-grid partner-people-grid" data-people-group="partners"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-cta services-cta">
+        <div class="container">
+          <div class="cta-float cta-float-left" aria-hidden="true">
+            <span class="material-symbols-outlined">hub</span>
+          </div>
+
+          <div class="cta-float cta-float-right" aria-hidden="true">
+            <span class="material-symbols-outlined">public</span>
+          </div>
+
+          <h2>Ready to architect impact?</h2>
+          <p>Let's bring your next Pan-African initiative into focus.</p>
+
+          <a class="button services-cta-button" href="contact-us.html#work-with-us">
+            <span>Initiate Collaboration</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+          </a>
+        </div>
+      </section>
+    </main>

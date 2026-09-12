@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1120px"
+    },
+    "color": {
+      "palette": [
+        { "slug": "njc-green", "name": "NJC Green", "color": "#064e3b" },
+        { "slug": "njc-ink", "name": "NJC Ink", "color": "#14352c" },
+        { "slug": "njc-cream", "name": "NJC Cream", "color": "#f5f1e7" },
+        { "slug": "njc-gold", "name": "NJC Gold", "color": "#d5a84b" },
+        { "slug": "white", "name": "White", "color": "#ffffff" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        { "slug": "njc-sans", "name": "Hanken Grotesk", "fontFamily": "'Hanken Grotesk', sans-serif" },
+        { "slug": "njc-serif", "name": "Playfair Display", "fontFamily": "'Playfair Display', serif" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#14352c"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--njc-sans)",
+      "fontSize": "16px",
+      "lineHeight": "1.7"
+    }
+  }
+}
