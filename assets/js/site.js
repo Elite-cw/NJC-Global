@@ -38,7 +38,17 @@
     ],
     partners: [
       { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Partner' },
-      { id: 'partner-abongwa-celestine', name: 'Abongwa Celestine', role: 'Partner' }
+      {
+        id: 'partner-abongwa-celestine',
+        name: 'Abongwa Celestin',
+        role: 'Founder & Visionary Leader, RenewBerry',
+        location: 'Cameroon',
+        bio: 'Empowering creators and spreading hope through visual storytelling.',
+        image: 'assets/images/team/abongwa-celestin.png',
+        imageAlt: 'Portrait of Abongwa Celestin, Founder and Visionary Leader at RenewBerry',
+        width: 1122,
+        height: 1402
+      }
     ]
   });
 
@@ -89,6 +99,8 @@
         <div class="team-member-copy">
           <small>${person.role}</small>
           <h3>${person.name}</h3>
+          ${person.location ? `<span class="team-member-location">${person.location}</span>` : ''}
+          ${person.bio ? `<p>${person.bio}</p>` : ''}
         </div>
       </article>
     `).join('');
