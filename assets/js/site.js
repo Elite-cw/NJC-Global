@@ -2,9 +2,8 @@
   'use strict';
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isViewPage = window.location.pathname.includes('/view/');
-  const pagePrefix = isViewPage ? '' : 'view/';
-  const assetPrefix = isViewPage ? '../' : '';
+  const siteRoot = new URL('../../', document.currentScript.src);
+  const pagePrefix = new URL('view/', siteRoot).href;
 
   const peopleDirectory = Object.freeze({
     team: [
@@ -47,7 +46,7 @@
     if (person.image) {
       return `
         <span class="${className} has-image">
-          <img src="${assetPrefix}${person.image}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy">
+          <img src="${new URL(person.image, siteRoot).href}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy">
         </span>
       `;
     }
@@ -64,7 +63,7 @@
   if (teamTree) {
     const [leader, ...teamMembers] = peopleDirectory.team;
     const renderTreePerson = (person, isLeader = false) => `
-      <a class="team-tree-person${isLeader ? ' team-tree-lead' : ''}" href="view/about-us.html#${person.id}"${isLeader ? '' : ' role="listitem"'}>
+      <a class="team-tree-person${isLeader ? ' team-tree-lead' : ''}" href="${pagePrefix}about-us.html#${person.id}"${isLeader ? '' : ' role="listitem"'}>
         ${renderPortrait(person, 'team-tree-portrait')}
         <span class="team-tree-copy">
           <strong>${person.name}</strong>
