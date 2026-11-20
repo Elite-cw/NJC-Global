@@ -4928,14 +4928,17 @@ body>footer form button .material-symbols-outlined {
 }
 
 .testimonial-author>span:last-child {
-  display: grid;
-  gap: 2px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: baseline;
   min-width: 0
 }
 
 .testimonial-author strong,
 .testimonial-author small {
-  display: block
+  display: inline;
+  white-space: nowrap
 }
 
 .testimonial-author strong {
