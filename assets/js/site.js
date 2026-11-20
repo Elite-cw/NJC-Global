@@ -19,10 +19,10 @@
       },
       {
         id: 'team-daniel-friday',
-        name: 'Daniel Friday',
+        name: 'Daniel Ugochi',
         role: 'Team',
         image: 'assets/images/team/daniel-friday.png',
-        imageAlt: 'Profile placeholder for Daniel Friday',
+        imageAlt: 'Profile placeholder for Daniel Ugochi',
         width: 1254,
         height: 1254
       },
