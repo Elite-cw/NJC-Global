@@ -4909,18 +4909,19 @@ body>footer form button .material-symbols-outlined {
 
 .testimonial-author {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 13px;
   margin: 21px 16px 0 30px
 }
 
 .testimonial-avatar {
   display: grid;
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   place-items: center;
   border-radius: 50%;
+  overflow: hidden;
   background: var(--green);
   color: var(--white);
   font-size: 12px;
@@ -4928,22 +4929,20 @@ body>footer form button .material-symbols-outlined {
 }
 
 .testimonial-author>span:last-child {
-  display: grid;
-  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   min-width: 0
 }
 
-.testimonial-author strong,
-.testimonial-author small {
-  display: block
-}
-
 .testimonial-author strong {
+  display: block;
   color: var(--ink);
   line-height: 1.3
 }
 
 .testimonial-author small {
+  display: block;
   color: var(--muted);
   font-size: 11px;
   line-height: 1.35
