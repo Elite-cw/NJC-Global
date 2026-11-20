@@ -37,18 +37,9 @@
       }
     ],
     partners: [
-      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Partner' },
-      {
-        id: 'partner-abongwa-celestine',
-        name: 'Abongwa Celestin',
-        role: 'Founder & Visionary Leader, RenewBerry',
-        location: 'Cameroon',
-        bio: 'Empowering creators and spreading hope through visual storytelling.',
-        image: 'assets/images/team/abongwa-celestin.png',
-        imageAlt: 'Portrait of Abongwa Celestin, Founder and Visionary Leader at RenewBerry',
-        width: 1122,
-        height: 1402
-      }
+      { id: 'partner-jimi-obawole', name: 'Jimi Obawole', role: 'Founder, Nia Nexus Africa', location: 'US' },
+      { id: 'partner-winifred-gaillard', name: 'Winifred Gaillard', role: 'Founder, The AfrikaFora', location: 'France', image: 'assets/images/partners/winifred-uloaku-gaillard.jpg', imageAlt: 'Portrait of Winifred Gaillard', width: 200, height: 200 },
+      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Country Director, CBW Africa, Zimbabwe Chapter', location: 'South Africa', image: 'assets/images/partners/angeline-mhlanga.jpg', imageAlt: 'Portrait of Angeline Mhlanga', width: 1070, height: 1337 }
     ]
   });
 
@@ -95,12 +86,12 @@
 
     grid.innerHTML = people.map((person) => `
       <article class="team-member-card" id="${person.id}">
-        ${renderPortrait(person, 'team-member-portrait')}
+        ${person.id === 'partner-jimi-obawole' ? '' : renderPortrait(person, 'team-member-portrait')}
         <div class="team-member-copy">
           <small>${person.role}</small>
           <h3>${person.name}</h3>
           ${person.location ? `<span class="team-member-location">${person.location}</span>` : ''}
-          ${person.bio ? `<p>${person.bio}</p>` : ''}
+          ${grid.dataset.peopleGroup !== 'partners' && person.bio ? `<p>${person.bio}</p>` : ''}
         </div>
       </article>
     `).join('');
@@ -184,13 +175,12 @@
 
   loader.className = 'page-loader';
   loader.setAttribute('role', 'status');
+  loader.setAttribute('aria-label', 'Loading');
   loader.setAttribute('aria-live', 'polite');
   loader.setAttribute('aria-hidden', 'true');
   loader.innerHTML = `
     <div class="page-loader-panel">
       <span class="page-loader-mark" aria-hidden="true"><svg class="loader-globe" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="loader-orbit-back"><rect x="-80" y="-80" width="160" height="80"/></clipPath><clipPath id="loader-orbit-front"><rect x="-80" y="0" width="160" height="80"/></clipPath></defs><g transform="translate(60 60) rotate(-25) scale(1 .42)"><g clip-path="url(#loader-orbit-back)"><circle r="52" stroke="var(--cream, #f8f5ed)" stroke-width="11"/><circle r="52" stroke="currentColor" stroke-width="4"/><g class="loader-globe-arrow"><path d="M-5-52H8" stroke="var(--cream, #f8f5ed)" stroke-width="12" stroke-linecap="round"/><path d="M-5-52H8" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M5-64 21-52 5-40Z" fill="currentColor"/></g></g></g><circle cx="60" cy="60" r="39" fill="currentColor"/><path d="M41 25 51 24 54 31 50 37 57 43 68 40 73 47 72 54 80 61 75 70 69 72 66 87 58 96 53 85 51 74 44 68 42 58 34 53 29 44 33 34Z M78 28 87 33 94 43 86 44 80 38Z M82 76 87 80 84 91 80 93Z" fill="var(--cream, #f8f5ed)"/><g transform="translate(60 60) rotate(-25) scale(1 .42)"><g clip-path="url(#loader-orbit-front)"><circle r="52" stroke="var(--cream, #f8f5ed)" stroke-width="11"/><circle r="52" stroke="currentColor" stroke-width="4"/><g class="loader-globe-arrow"><path d="M-5-52H8" stroke="var(--cream, #f8f5ed)" stroke-width="12" stroke-linecap="round"/><path d="M-5-52H8" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M5-64 21-52 5-40Z" fill="currentColor"/></g></g></g></svg></span>
-      <span class="page-loader-label">Preparing your experience</span>
-      <span class="page-loader-progress" aria-hidden="true"><i></i></span>
     </div>
   `;
 

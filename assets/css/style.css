@@ -2415,7 +2415,7 @@ nav a:after {
   background:
     linear-gradient(90deg, rgba(3,39,30,.82), rgba(3,39,30,.38) 62%, rgba(3,39,30,.15)),
     linear-gradient(180deg, rgba(3,39,30,.08) 25%, rgba(3,39,30,.62)),
-    url('../images/stock/ae0b53dc533cfa78.jpg') center / cover;
+    url('../images/events/african-summit-hero.jpg') center / cover;
   box-shadow: 0 32px 80px rgba(6,44,34,.2);
   filter: saturate(.92) contrast(1.04);
   animation: events-hero-breathe 12s ease-in-out infinite alternate
@@ -7350,3 +7350,69 @@ footer .footer-grid > .newsletter-signup > a.newsletter-footer-link { display:in
   line-clamp:5;
   overflow:hidden;
 }
+
+.event-detail-mockup.event-photo-fit { aspect-ratio:auto; }
+.event-photo-fit img.event-detail-image { display:block; width:100%; height:auto; background:none; }
+
+.partner-founder { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+.partner-founder img { display:block; width:88px; height:88px; flex:0 0 88px; border-radius:16px; object-fit:cover; }
+.partner-founder strong { display:block; color:var(--ink); font:600 20px/1.3 var(--serif); }
+.partner-founder span { display:block; margin-top:6px; color:var(--muted); font:400 14px/1.5 var(--sans); }
+
+#partner-angeline-mhlanga .team-member-portrait img { object-position:35% 25%; }
+
+#partner-jimi-obawole.team-member-card { align-self:start; }
+
+.contact-image-card > div { background-image:linear-gradient(180deg,transparent 35%,rgba(3,44,32,.88)),url('../images/home-back.jpg'); background-position:center; }
+
+.about-photo-women { background-image:url('../images/about-joyce-speaking.jpg'); background-size:cover; background-position:42% center; }
+
+/* Crop within the fixed portrait frame instead of clipping a tall image from its top. */
+.team-member-portrait.has-image img { position:absolute; inset:0; width:100%; height:100%; border-radius:0; object-fit:cover; object-position:center center; }
+
+.about-photo-women::after { content:''; position:absolute; inset:0; background:url('../images/about-womens-leadership-summit.jpg') 53% center/cover no-repeat; opacity:0; animation:about-middle-crossfade 12s ease-in-out infinite; }
+@keyframes about-middle-crossfade { 0%,40%,100% { opacity:0; } 50%,90% { opacity:1; } }
+.about-photo-women:hover::after { animation-play-state:paused; }
+@media(prefers-reduced-motion:reduce) { .about-photo-women::after { animation:none; } }
+
+.contact-image-card > div::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,rgba(3,44,32,.88)),url('../images/contact-womens-leadership.jpg') center/cover no-repeat; opacity:0; animation:contact-photo-crossfade 12s ease-in-out infinite; }
+@keyframes contact-photo-crossfade { 0%,40%,100% { opacity:0; } 50%,90% { opacity:1; } }
+.contact-image-card:hover > div::after { animation-play-state:paused; }
+@media(prefers-reduced-motion:reduce) { .contact-image-card > div::after { animation:none; } }
+
+/* Show the two supplied summit photographs together. */
+.about-photo-event { left:0; width:54%; background-image:url('../images/about-joyce-speaking.jpg'); background-size:cover; background-position:42% center; clip-path:polygon(0 0,100% 0,90% 100%,0 100%); }
+.about-photo-women { left:46%; width:54%; background-image:url('../images/about-womens-leadership-summit.jpg'); background-size:cover; background-position:53% center; clip-path:polygon(10% 0,100% 0,100% 100%,0 100%); }
+.about-photo-women::after { content:none; animation:none; }
+
+.page-loader-panel { min-width:0; padding:0; gap:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+
+/* Compact mobile blog feature and readable article typography. */
+@media(max-width:680px) {
+  .blog-page .blog-hero { padding:36px 0 40px; }
+  .blog-page .blog-hero-heading h1 { font-size:32px; line-height:1.12; }
+  .blog-page .blog-hero-heading > p:last-child { font-size:16px; line-height:1.6; }
+  .blog-page .featured-blog-card { display:flex; flex-direction:column; align-items:stretch; overflow:hidden; border-radius:20px; }
+  .blog-page .featured-blog-image { min-height:0; height:auto; aspect-ratio:16/10; border-radius:0; }
+  .blog-page .featured-blog-copy { margin:0; padding:22px; border-left:0; border-radius:0; box-shadow:none; background:var(--white); }
+  .blog-page .featured-blog-copy h2 { margin:14px 0 18px; font-size:27px; line-height:1.18; letter-spacing:-.02em; }
+  .blog-page .featured-blog-copy > p { display:none; }
+  .blog-page .blog-meta { flex-wrap:wrap; gap:8px; font-size:12px; }
+  .blog-page .blog-meta > span { font-size:9px; padding:6px 9px; }
+  .blog-page .blog-author-row { margin-top:18px; gap:16px; }
+  .blog-page .blog-author p { font-size:13px; }
+  .article-header { padding:36px 0 24px; }
+  .article-header h1 { font-size:32px; line-height:1.15; letter-spacing:-.02em; overflow-wrap:break-word; }
+  .article-body p, .article-body li { font-size:16px; line-height:1.75; }
+  [data-article-page] > .article-section { padding-top:28px; }
+}
+
+.blog-page .featured-blog-image { background-size:cover; background-position:center; }
+
+.published-article-page .article-header { padding-bottom:32px; }
+.published-article-page .article-section { padding-top:28px; }
+.published-article-page .article-content figure { margin:0 0 28px; }
+.published-article-page .article-content img { display:block; max-width:100%; height:auto; margin-inline:auto; }
+.published-article-page .article-content h2 { font-size:30px; line-height:1.25; }
+.published-article-page .article-content a { color:var(--green); text-decoration:underline; }
+@media(max-width:680px) { .published-article-page .article-content h2 { font-size:26px; } }
