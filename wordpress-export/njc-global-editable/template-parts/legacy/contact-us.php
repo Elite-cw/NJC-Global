@@ -79,7 +79,7 @@
                 <a class="contact-main-email" href="mailto:info@njcglobal.site">info@njcglobal.site</a>
               </div>
               <div class="contact-email-grid">
-                <div><h2>Talent &amp; Partnerships</h2><a href="mailto:info@njcglobal.site">info@njcglobal.site</a></div>
+                <div><h2>Talent &amp; Partnerships</h2><a href="mailto:joyce@njcglobal.site">joyce@njcglobal.site</a></div>
                 <div><h2>Media Relations</h2><a href="mailto:info@njcglobal.site">info@njcglobal.site</a></div>
               </div>
               <div class="contact-location-card">
@@ -121,77 +121,15 @@
             </header>
 
             <div class="testimonial-viewport" tabindex="0" aria-label="Client testimonials">
-              <div class="testimonial-track">
-                <article class="testimonial-slide">
-                  <div class="testimonial-bubble">
-                    <blockquote>“Joyce delivers impactful events with grace and precision.”</blockquote>
-                    <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                  </div>
-                  <footer class="testimonial-author">
-                    <span class="testimonial-avatar" aria-hidden="true">AM</span>
-                    <span><strong>Angeline Mhlanga</strong><small>Country Head, CBW Zimbabwe</small></span>
-                  </footer>
-                </article>
-
-                <article class="testimonial-slide">
-                  <div class="testimonial-bubble">
-                    <blockquote>“NJC Global brought clarity to every part of our project.”</blockquote>
-                    <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                  </div>
-                  <footer class="testimonial-author">
-                    <span class="testimonial-avatar" aria-hidden="true">AO</span>
-                    <span><strong>Amara Okafor</strong><small>Executive Director, Elevate Africa</small></span>
-                  </footer>
-                </article>
-
-                <article class="testimonial-slide">
-                  <div class="testimonial-bubble">
-                    <blockquote>“The team delivered an event experience that felt polished, relevant, and unmistakably African.”</blockquote>
-                    <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                  </div>
-                  <footer class="testimonial-author">
-                    <span class="testimonial-avatar" aria-hidden="true">KM</span>
-                    <span><strong>Kwame Mensah</strong><small>Programme Lead, Africa Forward</small></span>
-                  </footer>
-                </article>
-
-                <article class="testimonial-slide">
-                  <div class="testimonial-bubble">
-                    <blockquote>“NJC Global helped us communicate our value with confidence and reach the right audience.”</blockquote>
-                    <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                  </div>
-                  <footer class="testimonial-author">
-                    <span class="testimonial-avatar" aria-hidden="true">NK</span>
-                    <span><strong>Njeri Kamau</strong><small>Founder, Kijani Ventures</small></span>
-                  </footer>
-                </article>
-              </div>
+              <div class="testimonial-track"><?php njc_render_reviews(); ?></div>
             </div>
           </div>
 
           <dl class="contact-proof-stats">
-            <div><dt>12+</dt><dd>African markets</dd></div>
-            <div><dt>60+</dt><dd>Projects delivered</dd></div>
+            <div><dt>5+</dt><dd>African markets</dd></div>
+            <div><dt>10</dt><dd>Projects delivered</dd></div>
             <div><dt>98%</dt><dd>Partner satisfaction</dd></div>
           </dl>
-        </div>
-      </section>
-
-      <section class="contact-work-cta">
-        <div class="container">
-          <span class="material-symbols-outlined">handshake</span>
-          <div><p class="eyebrow">Work with us</p><h2>Let's turn ambition into action.</h2><p>Tell us what you are building and where you need momentum.</p></div>
-          <a class="button light" href="#work-with-us">Start a conversation</a>
-        </div>
-      </section>
-
-      <section class="contact-community" id="newsletter-community">
-        <div class="container contact-community-inner">
-          <div><p class="eyebrow">NJC Community</p><h2>Stay close to African ideas and opportunities.</h2><p>Selected insights and invitations from our network.</p></div>
-          <form id="community-form" data-njc-server-form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
-            <input type="hidden" name="action" value="njc_subscribe">
-            <?php wp_nonce_field( 'njc_subscribe', 'njc_subscribe_nonce' ); ?>
-            <label class="njc-form-trap" aria-hidden="true">Website<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label><label class="sr-only" for="community-contact-email">Email address</label><input id="community-contact-email" name="email" type="email" placeholder="Your email address" required><button class="button" type="submit">Join the community</button><small>Useful updates only. Unsubscribe whenever you like.</small></form>
         </div>
       </section>
     </main>

@@ -6,10 +6,9 @@
             <p>We connect African talent, events, and stories with the platforms they need to grow.</p>
             <div class="story-marker" aria-hidden="true"><span>Discover Our Story</span><i></i></div>
           </div>
-          <div class="about-hero-image" aria-label="NJC Global events, women leaders, and multigenerational professionals collaborating">
-            <div class="about-photo-card about-photo-women" role="img" aria-label="African women participating in a professional conference"></div>
-            <div class="about-photo-card about-photo-event" role="img" aria-label="Speaker addressing an audience at an African business event"></div>
-            <div class="about-photo-card about-photo-boardroom" role="img" aria-label="Young and senior African professionals collaborating around a boardroom table"></div>
+          <div class="about-hero-image" aria-label="Joyce speaking at African leadership summits">
+            <div class="about-photo-card about-photo-women" role="img" aria-label="Joyce participating in a women leadership summit panel"></div>
+            <div class="about-photo-card about-photo-event" role="img" aria-label="Joyce speaking at an African summit"></div>
           </div>
         </div>
       </section>
@@ -83,18 +82,18 @@
           </div>
 
           <div class="partner-card-grid">
-            <article class="partner-profile-card partner-profile-card-a" id="partner-afrikafora">
+            <article class="partner-profile-card partner-profile-card-c" id="partner-nia-nexus">
               <div class="partner-profile-top">
                 <span class="partner-profile-logo">
-                  <img src="../assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
+                  <img src="../assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
                 </span>
-                <small>Culture &amp; trade · 01</small>
+                <small>Culture &amp; commerce · ? 01</small>
               </div>
               <div>
-                <h3>The AfrikaFora</h3>
-                <p>Connecting African culture, trade, and diaspora communities.</p>
+                <h3>Nia Nexus</h3>
+                <p>A home for African stories, culture, and commerce.</p>
               </div>
-              <a href="#partner-afrikafora-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+              <a href="#partner-nia-nexus-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
             </article>
 
             <article class="partner-profile-card partner-profile-card-b" id="partner-cbw-africa">
@@ -102,7 +101,7 @@
                 <span class="partner-profile-logo">
                   <img src="../assets/images/partners/cbw-africa-zimbabwe.jpg" alt="CBW Africa Zimbabwe Virtual Chapter logo">
                 </span>
-                <small>Business network · 02</small>
+                <small>Business network · ? 02</small>
               </div>
               <div>
                 <h3>CBW Africa Zimbabwe</h3>
@@ -111,18 +110,18 @@
               <a href="#partner-cbw-africa-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
             </article>
 
-            <article class="partner-profile-card partner-profile-card-c" id="partner-nia-nexus">
+            <article class="partner-profile-card partner-profile-card-a" id="partner-afrikafora">
               <div class="partner-profile-top">
                 <span class="partner-profile-logo">
-                  <img src="../assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
+                  <img src="../assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
                 </span>
-                <small>Culture &amp; commerce · 03</small>
+                <small>Culture &amp; trade · ? 03</small>
               </div>
               <div>
-                <h3>Nia Nexus</h3>
-                <p>A home for African stories, culture, and commerce.</p>
+                <h3>The AfrikaFora</h3>
+                <p>Connecting African culture, trade, and diaspora communities.</p>
               </div>
-              <a href="#partner-nia-nexus-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
+              <a href="#partner-afrikafora-details">Read full profile <span class="material-symbols-outlined inline-link-icon icon-down" aria-hidden="true">south_east</span></a>
             </article>
 
             <article class="partner-profile-card partner-profile-card-d" id="partner-renewberry">
@@ -155,22 +154,22 @@
           </div>
 
           <div class="partner-detail-list" aria-label="Detailed partner and past client profiles">
-            <article class="partner-detail-panel" id="partner-afrikafora-details">
+            <article class="partner-detail-panel" id="partner-nia-nexus-details">
               <div class="partner-detail-identity">
                 <span class="partner-detail-logo">
-                  <img src="../assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
+                  <img src="../assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
                 </span>
                 <div>
-                  <small>Partner profile · 01</small>
-                  <h3>The AfrikaFora</h3>
-                  <p>Culture, trade, and diaspora engagement</p>
+                  <small>Partner profile · ? 01</small>
+                  <h3>Nia Nexus</h3>
+                  <p>Culture, stories, and African commerce</p>
                 </div>
               </div>
               <div class="partner-detail-copy">
-                <p>The AfrikaFora connects African and diaspora communities through culture, trade, events, and strategic conversations.</p>
+                <p>Nia Nexus Africa (nianexus.africa) is a digital resource hub and cultural platform founded by Houston-based entrepreneur Jimi Obawole. Positioned as &quot;The Diaspora's Digital Crossroads,&quot; Nia Nexus was built to connect, educate, and inspire audiences around the world on all things Africa. Rather than treating African heritage as a distant relic, the platform bridges the continent and the global diaspora, spotlighting the history, commerce, literature, fashion, and everyday innovations that link African roots to modern diaspora life.</p>
                 <div class="partner-detail-actions">
-                  <a class="button" href="https://theafrikafora.com/" target="_blank" rel="noopener noreferrer">Visit official website</a>
-                  <a class="text-link" href="#partner-afrikafora">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                  <a class="button" href="https://nianexus.africa/" target="_blank" rel="noopener noreferrer">Visit official website</a>
+                  <a class="text-link" href="#partner-nia-nexus">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
                 </div>
               </div>
             </article>
@@ -181,13 +180,13 @@
                   <img src="../assets/images/partners/cbw-africa-zimbabwe.jpg" alt="CBW Africa Zimbabwe Virtual Chapter logo">
                 </span>
                 <div>
-                  <small>Partner profile · 02</small>
+                  <small>Partner profile · ? 02</small>
                   <h3>CBW Africa Zimbabwe</h3>
                   <p>Women in business and leadership</p>
                 </div>
               </div>
               <div class="partner-detail-copy">
-                <p>CBW Africa Zimbabwe connects businesswomen through a virtual community for leadership, enterprise, and cross-border opportunity.</p>
+                <p>Commonwealth Businesswomen Africa (CBW-Africa) Zimbabwe Chapter is a non-profit organization and national chapter of the wider continental CBW-Africa network, led by Country Head Angeline Mhlanga. The chapter officially launched its local operations in July 2025 after a year of running virtually. Its core mission is to equip women entrepreneurs and professionals with mentorship, training, digital inclusion, corporate communication skills, and cross-border business development opportunities, helping them build sustainable legacies while tapping into Pan-African and global networks.</p>
                 <div class="partner-detail-actions">
                   <a class="button" href="https://www.linkedin.com/company/cbw-africa-zimbabwe-virtual-chapter/" target="_blank" rel="noopener noreferrer">Visit official page</a>
                   <a class="text-link" href="#partner-cbw-africa">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
@@ -195,22 +194,23 @@
               </div>
             </article>
 
-            <article class="partner-detail-panel" id="partner-nia-nexus-details">
+            <article class="partner-detail-panel" id="partner-afrikafora-details">
               <div class="partner-detail-identity">
                 <span class="partner-detail-logo">
-                  <img src="../assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
+                  <img src="../assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
                 </span>
                 <div>
-                  <small>Partner profile · 03</small>
-                  <h3>Nia Nexus</h3>
-                  <p>Culture, stories, and African commerce</p>
+                  <small>Partner profile · ? 03</small>
+                  <h3>The AfrikaFora</h3>
+                  <p>Culture, trade, and diaspora engagement</p>
                 </div>
               </div>
               <div class="partner-detail-copy">
-                <p>Nia Nexus brings African history, culture, stories, and products together in one accessible digital destination.</p>
+                <div class="partner-founder"><img src="../assets/images/partners/winifred-uloaku-gaillard.jpg" alt="Winifred Uloaku Gaillard" width="200" height="200" loading="lazy"><div><strong>Winifred Uloaku Gaillard</strong><span>Founder, The AfrikaFora</span></div></div>
+                <p>The AfrikaFora (formerly known as AfricaFora) is a France-based pan-African organization founded and led by Winifred Uloaku Gaillard, an experienced events curator, intercultural life coach, 2023 Voice Achievers Cultural Award winner, and inaugural member of the ONE Campaign Ubuntu Circle in France. Dedicated to reshaping global narratives around Africa and its diaspora, the organization specializes in promoting African cultural, economic, and creative values worldwide. Its core mission is to showcase African culture and enterprise, boost intra-African trade and collaboration, and champion the continent's human and natural resources toward an independent, self-reliant, and peaceful Africa.</p>
                 <div class="partner-detail-actions">
-                  <a class="button" href="https://nianexus.africa/" target="_blank" rel="noopener noreferrer">Visit official website</a>
-                  <a class="text-link" href="#partner-nia-nexus">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
+                  <a class="button" href="https://theafrikafora.com/" target="_blank" rel="noopener noreferrer">Visit official website</a>
+                  <a class="text-link" href="#partner-afrikafora">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
                 </div>
               </div>
             </article>
@@ -227,7 +227,7 @@
                 </div>
               </div>
               <div class="partner-detail-copy">
-                <p>Renewberry helps audiences discover curated, premium video content while giving creators a focused digital platform.</p>
+                <p>RenewBerry (renewberry.io) is a digital media and creator platform focused on meaningful media, community connection, and premium digital content. Founded by Abongwa Celestin and built around the motto &quot;Believe. Begin. Become,&quot; the platform enables creators and brands to share curated video content, publish articles, and build authentic, trust-driven relationships with their audiences. Rather than chasing empty noise, RenewBerry champions human-centered storytelling, helping brands and creators move beyond generic broadcasting to spark honest, lasting conversations with their communities.</p>
                 <div class="partner-detail-actions">
                   <a class="button" href="https://renewberry.io/" target="_blank" rel="noopener noreferrer">Visit official website</a>
                   <a class="text-link" href="#partner-renewberry">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>
@@ -247,7 +247,7 @@
                 </div>
               </div>
               <div class="partner-detail-copy">
-                <p>A past NJC Global client, Africa for Africa Women advances leadership and economic participation through mentorship, collaboration, conferences, and community.</p>
+                <p>Africa for Africa Women Empowerment (AFAW) is a South Africa-based pan-African movement founded and led by Bea Hackula, a transformational leader, mentor, founder of Assert Media (Assertive Women Magazine), and author of Arise: Be The Leader You Were Meant To Be. Built around the ethos of &quot;Lifting as You Rise,&quot; the organization is dedicated to empowering women and youth across Africa through leadership development, mentorship, education, and community-building initiatives. Its work actively advances the African Union's Agenda 2063 and the UN Sustainable Development Goals (particularly SDG 5 on gender equality) by expanding women's participation in business, governance, and economic decision-making.</p>
                 <div class="partner-detail-actions">
                   <a class="button" href="https://africa4africawomen.org/" target="_blank" rel="noopener noreferrer">Visit official website</a>
                   <a class="text-link" href="#partner-africa-women">Close profile <span class="material-symbols-outlined inline-link-icon icon-up" aria-hidden="true">arrow_upward</span></a>

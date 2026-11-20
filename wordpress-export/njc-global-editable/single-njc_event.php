@@ -7,7 +7,7 @@
 
 get_header();
 while ( have_posts() ) : the_post();
-	$cta_url = njc_event_meta( 'cta_url' ) ?: njc_page_url( 'contact-us', '#work-with-us' );
+	$cta_url = njc_event_meta( 'cta_url' );
 	?>
 	<main class="event-details-page">
 		<section class="event-details-hero">
@@ -21,7 +21,7 @@ while ( have_posts() ) : the_post();
 						<?php if ( njc_event_date() ) : ?><span><span class="material-symbols-outlined">calendar_today</span> <?php echo esc_html( njc_event_date( get_the_ID(), 'M j, Y · g:i a' ) ); ?></span><?php endif; ?>
 						<?php if ( njc_event_meta( 'location' ) ) : ?><span><span class="material-symbols-outlined">location_on</span> <?php echo esc_html( njc_event_meta( 'location' ) ); ?></span><?php endif; ?>
 					</div>
-					<a class="button" href="<?php echo esc_url( $cta_url ); ?>"><?php esc_html_e( 'Register Your Interest', 'njc-global' ); ?></a>
+					<?php if ( $cta_url ) : ?><a class="button" href="<?php echo esc_url( $cta_url ); ?>"><?php esc_html_e( 'Register Your Interest', 'njc-global' ); ?></a><?php endif; ?>
 				</div>
 				<div class="event-detail-mockup"><div class="event-detail-image"<?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'large' ) ); ?>')"<?php endif; ?>></div></div>
 			</div>

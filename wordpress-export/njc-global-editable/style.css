@@ -3,15 +3,454 @@ Theme Name: NJC Global Editable
 Theme URI: https://www.njcglobal.site/
 Author: NJC Global
 Description: A custom, installable WordPress theme preserving the NJC Global static-site design while adding safe editorial templates for posts and events.
-Version: 0.2.0
+Version: 1.3.0
 Requires at least: 6.5
 Requires PHP: 8.1
 Text Domain: njc-global
 */
 
 /* WordPress-only compatibility rules. The original visual system lives in assets/css/site.css. */
+.blog-page,
+.projects-page,
+.njc-article-template,
+.editor-styles-wrapper {
+  font-family: var(--sans, "Hanken Grotesk", sans-serif);
+}
+
+.blog-page :is(h1, h2, h3, h4),
+.projects-page :is(h1, h2, h3, h4),
+.njc-article-template :is(h1, h2, h3, h4),
+.editor-styles-wrapper :is(h1, h2, h3, h4) {
+  font-family: var(--serif, "Playfair Display", serif);
+}
+.njc-authoritative-shell [data-njc-suppressed-header],
+.njc-authoritative-shell > .pagelayer-header,
+.njc-authoritative-shell > .elementor-location-header,
+.njc-authoritative-shell > [data-elementor-type="header"],
+.njc-authoritative-shell > .et-l--header,
+.njc-authoritative-shell > .fusion-header-wrapper,
+.njc-authoritative-shell > .fl-theme-builder-header,
+.njc-authoritative-shell > .brx-header,
+.njc-authoritative-shell > .ct-header,
+.njc-authoritative-shell > header#masthead:not([data-njc-site-header]),
+.njc-authoritative-shell > header#site-header:not([data-njc-site-header]),
+.njc-authoritative-shell > header#header:not([data-njc-site-header]),
+.njc-authoritative-shell > .site-header:not([data-njc-site-header]) {
+  display: none !important;
+}
+
 .admin-bar .site-header {
   top: 32px;
+}
+
+.article-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: var(--green);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.article-back-link .material-symbols-outlined {
+  font-size: 18px;
+  transition: transform .2s ease;
+}
+
+.article-back-link:hover .material-symbols-outlined,
+.article-back-link:focus-visible .material-symbols-outlined {
+  transform: translateX(-3px);
+}
+
+/* Protected NJC Journal article template. Editors supply content; this layout
+   keeps every published post aligned with the approved visual system. */
+.njc-article-template {
+  overflow: hidden;
+  background: var(--white);
+}
+
+.njc-article-hero {
+  padding: 72px 0 44px;
+  background:
+    radial-gradient(circle at 86% 15%, rgba(182, 125, 53, .13), transparent 25%),
+    linear-gradient(135deg, var(--surface-cream), var(--surface-warm));
+}
+
+.njc-article-hero .container {
+  max-width: 980px;
+}
+
+.njc-article-hero .breadcrumb {
+  margin-bottom: 38px;
+}
+
+.article-category {
+  display: inline-flex;
+  margin: 0 0 20px;
+  padding: 8px 13px;
+  border: 1px solid rgba(11, 79, 61, .14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .62);
+  color: var(--brand-yellow-deep);
+  font: 700 11px/1 var(--sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.njc-article-hero h1 {
+  max-width: 920px;
+  margin: 0;
+  color: var(--ink);
+  font: 700 clamp(46px, 6.4vw, 82px)/1.02 var(--serif);
+  letter-spacing: -.035em;
+}
+
+.article-lead {
+  max-width: 780px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font: 500 clamp(19px, 2vw, 24px)/1.55 var(--sans);
+}
+
+.article-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(20, 53, 44, .14);
+}
+
+.article-author-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--brand-yellow);
+  font: 700 14px/1 var(--sans);
+  letter-spacing: .05em;
+}
+
+.article-byline > div:not(.article-author-mark),
+.article-author-card > div:not(.article-author-mark) {
+  display: grid;
+  gap: 2px;
+}
+
+.article-byline span,
+.article-author-card span {
+  color: var(--muted);
+  font: 600 10px/1.2 var(--sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.article-byline strong,
+.article-author-card strong {
+  color: var(--ink);
+  font: 700 14px/1.35 var(--sans);
+}
+
+.article-byline-detail {
+  padding-left: 28px;
+  border-left: 1px solid rgba(20, 53, 44, .14);
+}
+
+.article-featured-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin-top: 0;
+}
+
+.article-featured-media {
+  aspect-ratio: 16 / 8.5;
+  margin: 0;
+  overflow: hidden;
+  border: 8px solid var(--white);
+  border-radius: 32px;
+  background: var(--surface-soft);
+  box-shadow: 0 30px 75px rgba(6, 44, 34, .16);
+}
+
+.article-featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.njc-article-template .article-section {
+  background: var(--white);
+}
+
+.njc-article-template .article-section.has-featured-image {
+  padding-top: 40px;
+}
+
+.njc-article-template .article-section.no-featured-image {
+  padding-top: 40px;
+}
+
+.njc-article-template .article-body {
+  max-width: 820px;
+}
+
+.article-content > :first-child {
+  margin-top: 0;
+}
+
+.article-content > p:first-child {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.75;
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  color: var(--ink);
+}
+
+.article-content a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(182, 125, 53, .55);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.article-content ul,
+.article-content ol {
+  display: grid;
+  gap: 10px;
+  padding-left: 24px;
+}
+
+.article-content blockquote {
+  margin: 48px 0;
+  padding: 28px 30px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--surface-cream);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.35;
+}
+
+.article-content blockquote p {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+
+.article-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+
+.article-content :is(.wp-block-image, .wp-block-gallery) {
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.article-content .wp-block-gallery {
+  gap: 14px;
+}
+
+.article-content .wp-block-gallery img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.article-content .wp-block-embed,
+.article-content .njc-link-preview {
+  margin: 36px 0;
+}
+
+.article-content .wp-block-embed__wrapper {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface-cream);
+}
+
+.article-content .wp-block-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+.article-content .njc-link-preview a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 20px;
+  align-items: center;
+  padding: 22px 24px;
+  border: 1px solid rgba(20, 53, 44, .14);
+  border-radius: 18px;
+  background: var(--surface-cream);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.article-content .njc-link-preview a:hover,
+.article-content .njc-link-preview a:focus-visible {
+  border-color: var(--brand-yellow-deep);
+  box-shadow: 0 16px 34px rgba(6, 44, 34, .1);
+  transform: translateY(-2px);
+}
+
+.article-content .njc-link-preview span:first-child {
+  color: var(--brand-yellow-deep);
+  font: 700 10px/1.2 var(--sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.article-content .njc-link-preview strong {
+  grid-column: 1;
+  overflow-wrap: anywhere;
+  font: 700 clamp(18px, 2vw, 22px)/1.3 var(--sans);
+}
+
+.article-content .njc-link-preview .material-symbols-outlined {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: var(--green);
+  font-size: 25px;
+}
+
+.article-author-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 64px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface-cream);
+}
+
+.njc-article-template .article-share {
+  margin-top: 28px;
+}
+
+.njc-article-template .article-share > div {
+  display: flex;
+  gap: 8px;
+}
+
+.njc-article-template .article-navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.njc-article-template .article-navigation .material-symbols-outlined {
+  font-size: 18px;
+  transition: transform .2s ease;
+}
+
+.njc-article-template .article-navigation a:first-child:hover .material-symbols-outlined {
+  transform: translateX(-3px);
+}
+
+.njc-article-template .article-navigation a:last-child:hover .material-symbols-outlined {
+  transform: translateX(3px);
+}
+
+@media (max-width: 760px) {
+  .njc-article-hero {
+    padding: 52px 0 32px;
+  }
+
+  .njc-article-hero .breadcrumb {
+    margin-bottom: 28px;
+  }
+
+  .njc-article-hero h1 {
+    font-size: clamp(39px, 12vw, 58px);
+  }
+
+  .article-byline {
+    gap: 16px;
+  }
+
+  .article-byline-detail {
+    width: calc(50% - 8px);
+    padding: 14px 0 0;
+    border-top: 1px solid rgba(20, 53, 44, .14);
+    border-left: 0;
+  }
+
+  .article-featured-wrap {
+    margin-top: 0;
+  }
+
+  .article-featured-media {
+    aspect-ratio: 4 / 3;
+    border-width: 5px;
+    border-radius: 22px;
+  }
+
+  .njc-article-template .article-section.has-featured-image {
+    padding-top: 32px;
+  }
+
+  .article-content > p:first-child {
+    font-size: 19px;
+  }
+
+  .article-content .wp-block-embed iframe {
+    min-height: 240px;
+  }
+
+  .njc-article-template .article-navigation {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+/* CookieAdmin currently emits an empty image URL for this control. Keep the
+   privacy control usable while giving it a clean NJC-aligned flat icon. */
+.cookieadmin_re_consent {
+  background: var(--green) !important;
+  color: var(--brand-yellow) !important;
+}
+
+.cookieadmin_re_consent .cookieadmin_reconsent_img {
+  display: none !important;
+}
+
+.cookieadmin_re_consent::before {
+  content: "tune";
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .njc-notice {
@@ -81,4 +520,17 @@ Text Domain: njc-global
   .admin-bar .site-header {
     top: 46px;
   }
+}
+
+@media(max-width:680px) {
+  .njc-article-hero { padding:32px 0 28px; }
+  .njc-article-hero .container, .njc-article-template .article-body { width:calc(100% - 36px); }
+  .njc-article-hero .breadcrumb { margin-bottom:22px; font-size:12px; }
+  .njc-article-hero h1 { font-size:32px; line-height:1.15; letter-spacing:-.02em; }
+  .article-category { margin-bottom:14px; font-size:9px; }
+  .article-byline { margin-top:24px; padding-top:18px; gap:12px; }
+  .njc-article-template .article-section { padding-top:28px; }
+  .article-content > p:first-child, .article-content p, .article-content li { font-size:16px; line-height:1.75; }
+  .article-content h2 { font-size:26px; line-height:1.25; }
+  .article-content h3 { font-size:22px; line-height:1.3; }
 }

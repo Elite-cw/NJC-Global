@@ -1,4 +1,53 @@
 (() => {
+  document.body.classList.remove('pagelayer-body');
+
+  const enforceNJCHeader = () => {
+    const njcHeaders = Array.from(document.querySelectorAll('[data-njc-site-header]'));
+    const primaryHeader = njcHeaders.shift();
+
+    if (!primaryHeader) return;
+
+    const foreignHeaderSelectors = [
+      'header:not([data-njc-site-header])',
+      'body > header:not([data-njc-site-header])',
+      '.pagelayer-header',
+      '[data-elementor-type="header"]',
+      '.elementor-location-header',
+      '.et-l--header',
+      '.fusion-header-wrapper',
+      '.fl-theme-builder-header',
+      '.brx-header',
+      '.ct-header',
+      'header#masthead:not([data-njc-site-header])',
+      'header#site-header:not([data-njc-site-header])',
+      'header#header:not([data-njc-site-header])',
+      '.site-header:not([data-njc-site-header])'
+    ];
+
+    const hideHeader = (header) => {
+      if (header === primaryHeader || primaryHeader.contains(header) || header.closest('main, article')) {
+        return;
+      }
+
+      header.hidden = true;
+      header.setAttribute('aria-hidden', 'true');
+      header.setAttribute('data-njc-suppressed-header', 'true');
+    };
+
+    njcHeaders.forEach(hideHeader);
+    document.querySelectorAll(foreignHeaderSelectors.join(',')).forEach(hideHeader);
+  };
+
+  enforceNJCHeader();
+
+  const headerObserver = new MutationObserver((mutations) => {
+    if (mutations.some((mutation) => mutation.addedNodes.length)) {
+      enforceNJCHeader();
+    }
+  });
+
+  headerObserver.observe(document.body, { childList: true, subtree: true });
+
   const menuButton = document.querySelector('.menu');
   const navigation = document.querySelector('#nav');
 

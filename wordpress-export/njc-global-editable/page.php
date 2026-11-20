@@ -7,7 +7,7 @@
 
 get_header();
 
-$slug = get_post_field( 'post_name', get_queried_object_id() );
+$slug = njc_legacy_page_slug( get_post_field( 'post_name', get_queried_object_id() ) );
 if ( njc_page_uses_editor() ) {
 	njc_render_editor_page();
 } elseif ( ! njc_render_legacy_part( $slug ) ) {

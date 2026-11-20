@@ -19,7 +19,7 @@ $events = new WP_Query(
 ?>
 <main class="events-page">
 	<section class="events-hero">
-		<div class="events-hero-image" role="img" aria-label="<?php esc_attr_e( 'A prestigious business event with people connecting', 'njc-global' ); ?>"></div>
+		<div class="events-hero-image" role="img" aria-label="<?php esc_attr_e( 'Delegates gathered at an African summit', 'njc-global' ); ?>"></div>
 		<div class="events-hero-badge" aria-hidden="true"><span class="material-symbols-outlined">event_available</span><small><?php esc_html_e( 'Curated encounters', 'njc-global' ); ?></small></div>
 		<div class="container events-hero-copy"><p class="eyebrow"><?php esc_html_e( 'NJC Global Events', 'njc-global' ); ?></p><h1><?php esc_html_e( 'Where Ideas, People and', 'njc-global' ); ?> <em><?php esc_html_e( 'Opportunity', 'njc-global' ); ?></em> <?php esc_html_e( 'Meet.', 'njc-global' ); ?></h1></div>
 	</section>

@@ -89,7 +89,7 @@ function njc_handle_subscription() {
 add_action( 'admin_post_nopriv_njc_subscribe', 'njc_handle_subscription' );
 add_action( 'admin_post_njc_subscribe', 'njc_handle_subscription' );
 
-function njc_handle_inquiry() {
+function njc_handle_inquiry( $recipient = 'info@njcglobal.site' ) {
 	if ( ! isset( $_POST['njc_inquiry_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['njc_inquiry_nonce'] ) ), 'njc_inquiry' ) ) {
 		njc_form_redirect( 'invalid' );
 	}
@@ -129,16 +129,25 @@ function njc_handle_inquiry() {
 		njc_form_redirect( 'error' );
 	}
 
-	wp_mail(
-		get_option( 'admin_email' ),
+	$mail_sent = wp_mail(
+		$recipient,
 		sprintf( 'New NJC website inquiry from %s', $name ),
 		$content,
 		array( 'Reply-To: ' . $name . ' <' . $email . '>' )
 	);
+	if ( ! $mail_sent ) {
+		njc_form_redirect( 'joyce@njcglobal.site' === $recipient ? 'project_mail_error' : 'mail_error' );
+	}
 	njc_form_redirect( 'sent' );
 }
 add_action( 'admin_post_nopriv_njc_inquiry', 'njc_handle_inquiry' );
 add_action( 'admin_post_njc_inquiry', 'njc_handle_inquiry' );
+
+function njc_handle_project_inquiry() {
+	njc_handle_inquiry( 'joyce@njcglobal.site' );
+}
+add_action( 'admin_post_nopriv_njc_project_inquiry', 'njc_handle_project_inquiry' );
+add_action( 'admin_post_njc_project_inquiry', 'njc_handle_project_inquiry' );
 
 function njc_form_message() {
 	if ( empty( $_GET['njc_form'] ) ) {
@@ -147,6 +156,8 @@ function njc_form_message() {
 	$status = sanitize_key( wp_unslash( $_GET['njc_form'] ) );
 	$messages = array(
 		'sent'       => __( 'Thank you. Your message has been sent.', 'njc-global' ),
+		'mail_error' => __( 'Your inquiry was saved, but the email could not be sent. Please email info@njcglobal.site directly.', 'njc-global' ),
+		'project_mail_error' => __( 'Your inquiry was saved, but the email could not be sent. Please email joyce@njcglobal.site directly.', 'njc-global' ),
 		'subscribed' => __( 'Thank you. You have joined the NJC community.', 'njc-global' ),
 		'invalid'    => __( 'Please check the information and try again.', 'njc-global' ),
 		'error'      => __( 'The request could not be saved. Please try again.', 'njc-global' ),

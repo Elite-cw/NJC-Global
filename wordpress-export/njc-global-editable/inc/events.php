@@ -53,23 +53,24 @@ add_action( 'add_meta_boxes', 'njc_add_event_metabox' );
 function njc_render_event_metabox( $post ) {
 	wp_nonce_field( 'njc_save_event', 'njc_event_nonce' );
 	$fields = array(
-		'njc_event_start'    => array( 'label' => __( 'Start date and time', 'njc-global' ), 'type' => 'datetime-local' ),
-		'njc_event_end'      => array( 'label' => __( 'End date and time', 'njc-global' ), 'type' => 'datetime-local' ),
-		'njc_event_location' => array( 'label' => __( 'Location', 'njc-global' ), 'type' => 'text' ),
-		'njc_event_region'   => array( 'label' => __( 'Region', 'njc-global' ), 'type' => 'text' ),
-		'njc_event_type'     => array( 'label' => __( 'Event type', 'njc-global' ), 'type' => 'text' ),
-		'njc_event_cta_url'  => array( 'label' => __( 'Registration or enquiry URL', 'njc-global' ), 'type' => 'url' ),
+		'njc_event_start'    => array( 'label' => __( 'Start date and time', 'njc-global' ), 'type' => 'datetime-local', 'placeholder' => '' ),
+		'njc_event_end'      => array( 'label' => __( 'End date and time', 'njc-global' ), 'type' => 'datetime-local', 'placeholder' => '' ),
+		'njc_event_location' => array( 'label' => __( 'Location', 'njc-global' ), 'type' => 'text', 'placeholder' => __( 'e.g. Lagos, Nigeria or Online', 'njc-global' ) ),
+		'njc_event_region'   => array( 'label' => __( 'Region', 'njc-global' ), 'type' => 'text', 'placeholder' => __( 'e.g. West Africa', 'njc-global' ) ),
+		'njc_event_type'     => array( 'label' => __( 'Event type', 'njc-global' ), 'type' => 'text', 'placeholder' => __( 'e.g. Conference, Workshop, Webinar', 'njc-global' ) ),
+		'njc_event_cta_url'  => array( 'label' => __( 'Registration or enquiry URL', 'njc-global' ), 'type' => 'url', 'placeholder' => 'https://' ),
 	);
 
 	echo '<div class="njc-event-fields" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">';
 	foreach ( $fields as $key => $field ) {
 		$value = get_post_meta( $post->ID, '_' . $key, true );
 		printf(
-			'<label style="display:grid;gap:6px"><strong>%1$s</strong><input type="%2$s" name="%3$s" value="%4$s" class="widefat"></label>',
+			'<label style="display:grid;gap:6px"><strong>%1$s</strong><input type="%2$s" name="%3$s" value="%4$s" placeholder="%5$s" class="widefat"></label>',
 			esc_html( $field['label'] ),
 			esc_attr( $field['type'] ),
 			esc_attr( $key ),
-			esc_attr( $value )
+			esc_attr( $value ),
+			esc_attr( $field['placeholder'] )
 		);
 	}
 

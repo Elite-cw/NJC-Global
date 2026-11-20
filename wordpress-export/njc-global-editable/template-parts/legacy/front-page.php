@@ -5,9 +5,9 @@
           <h1>NJC Global Network: For <em>Pan-African Excellence,</em> Positioning and Visibility.</h1>
           <p class="lead">We connect African talent, events, and organizations with the strategy and visibility needed to grow globally.</p>
           <div class="actions"><a class="button" href="view/contact-us.html#work-with-us">Get in touch</a><a class="text-link" href="view/projects.html">Explore projects <span class="material-symbols-outlined inline-link-icon" aria-hidden="true">arrow_forward</span></a></div>
-          <dl><div><dt>10</dt><dd>Organizations positioned</dd></div><div><dt>50</dt><dd>African professionals</dd></div><div><dt>Global</dt><dd>Presence and impact</dd></div></dl>
+          <dl><div><dt>African</dt><dd>Organizations positioned</dd></div><div><dt>African</dt><dd>Professionals connected</dd></div><div><dt>Global</dt><dd>Presence and impact</dd></div></dl>
         </div>
-        <div class="hero-visual"><div class="hero-main" role="img" aria-label="Pan-African professionals collaborating"></div><div class="hero-small" role="img" aria-label="African executive"></div><p><span>Featured</span>Professional talent. Strategic events. Brand growth.</p></div>
+        <div class="hero-visual"><div class="hero-main" role="img" aria-label="Panel discussion at the Africa Leadership and Summit"></div><div class="hero-small" role="img" aria-label="Women collaborating in a boardroom meeting"></div><p><span>Featured</span>Professional talent. Strategic events. Brand growth.</p></div>
       </section>
 
       <section class="trust"><div class="container"><p>African excellence. <em>Globally recognized.</em></p><div><span>Talent</span><span>Events</span><span>Organizations</span><span>Visibility</span><span>Growth</span></div></div></section>
@@ -21,13 +21,13 @@
           </div>
 
           <div class="partner-preview-list" aria-label="Featured partners and past clients">
-            <a class="partner-preview-card partner-preview-card-a" href="view/about-us.html#partner-afrikafora">
+            <a class="partner-preview-card partner-preview-card-c" href="view/about-us.html#partner-nia-nexus">
               <span class="partner-preview-logo">
-                <img src="assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
+                <img src="assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
               </span>
               <span>
-                <strong>The AfrikaFora</strong>
-                <small>Trade, culture &amp; diaspora</small>
+                <strong>Nia Nexus</strong>
+                <small>Culture, stories &amp; commerce</small>
               </span>
               <span class="material-symbols-outlined partner-preview-arrow" aria-hidden="true">arrow_outward</span>
             </a>
@@ -43,13 +43,13 @@
               <span class="material-symbols-outlined partner-preview-arrow" aria-hidden="true">arrow_outward</span>
             </a>
 
-            <a class="partner-preview-card partner-preview-card-c" href="view/about-us.html#partner-nia-nexus">
+            <a class="partner-preview-card partner-preview-card-a" href="view/about-us.html#partner-afrikafora">
               <span class="partner-preview-logo">
-                <img src="assets/images/partners/nia-nexus.png" alt="Nia Nexus logo">
+                <img src="assets/images/partners/the-afrikafora.png" alt="The AfrikaFora logo">
               </span>
               <span>
-                <strong>Nia Nexus</strong>
-                <small>Culture, stories &amp; commerce</small>
+                <strong>The AfrikaFora</strong>
+                <small>Trade, culture &amp; diaspora</small>
               </span>
               <span class="material-symbols-outlined partner-preview-arrow" aria-hidden="true">arrow_outward</span>
             </a>
@@ -93,20 +93,20 @@
             <p>Explore collaborations shaped for stronger reach and recognition. <br><a class="text-link" href="view/projects.html">View all projects <span class="material-symbols-outlined inline-link-icon" aria-hidden="true">arrow_forward</span></a></p>
           </div>
           <div class="work-grid" role="region" aria-label="Selected NJC Global projects" tabindex="0">
-            <article class="work-one">
-              <a class="home-work-card" href="view/projects.html" aria-label="View the Nzuko Africa 2026 project">
+            <article class="work-two">
+              <a class="home-work-card" href="https://nianexus.africa/" target="_blank" rel="noopener noreferrer" aria-label="Visit the Nia Nexus website">
                 <span class="home-work-number">01</span>
                 <div class="home-work-card-copy">
-                  <div><small>Event partnership</small><h3>Nzuko Africa 2026</h3></div>
+                  <div><small>Organization partnership</small><h3>Nia Nexus</h3></div>
                   <span class="material-symbols-outlined home-work-arrow" aria-hidden="true">arrow_outward</span>
                 </div>
               </a>
             </article>
-            <article class="work-two">
-              <a class="home-work-card" href="view/projects.html" aria-label="View the Nia Nexus project">
+            <article class="work-one">
+              <a class="home-work-card" href="https://theafrikafora.com/nzuko2026" target="_blank" rel="noopener noreferrer" aria-label="Visit the Nzuko Africa 2026 website">
                 <span class="home-work-number">02</span>
                 <div class="home-work-card-copy">
-                  <div><small>Organization partnership</small><h3>Nia Nexus</h3></div>
+                  <div><small>Event partnership</small><h3>Nzuko Africa 2026</h3></div>
                   <span class="material-symbols-outlined home-work-arrow" aria-hidden="true">arrow_outward</span>
                 </div>
               </a>
@@ -261,51 +261,7 @@
           </header>
 
           <div class="testimonial-viewport" tabindex="0" aria-label="Client testimonials">
-            <div class="testimonial-track">
-              <article class="testimonial-slide">
-                <div class="testimonial-bubble">
-                  <blockquote>“Joyce brings people together and delivers impactful events with grace and precision.”</blockquote>
-                  <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                </div>
-                <footer class="testimonial-author">
-                  <span class="testimonial-avatar" aria-hidden="true">AM</span>
-                  <span><strong>Angeline Mhlanga</strong><small>Country Head, CBW Zimbabwe</small></span>
-                </footer>
-              </article>
-
-              <article class="testimonial-slide">
-                <div class="testimonial-bubble">
-                  <blockquote>“NJC Global brought clarity to every part of our project.”</blockquote>
-                  <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                </div>
-                <footer class="testimonial-author">
-                  <span class="testimonial-avatar" aria-hidden="true">AO</span>
-                  <span><strong>Amara Okafor</strong><small>Executive Director, Elevate Africa</small></span>
-                </footer>
-              </article>
-
-              <article class="testimonial-slide">
-                <div class="testimonial-bubble">
-                  <blockquote>“The team delivered an event experience that felt polished, relevant, and unmistakably African.”</blockquote>
-                  <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                </div>
-                <footer class="testimonial-author">
-                  <span class="testimonial-avatar" aria-hidden="true">KM</span>
-                  <span><strong>Kwame Mensah</strong><small>Programme Lead, Africa Forward</small></span>
-                </footer>
-              </article>
-
-              <article class="testimonial-slide">
-                <div class="testimonial-bubble">
-                  <blockquote>“NJC Global helped us communicate our value with confidence and reach the right audience.”</blockquote>
-                  <span class="testimonial-stars" aria-label="Five out of five stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></span>
-                </div>
-                <footer class="testimonial-author">
-                  <span class="testimonial-avatar" aria-hidden="true">NK</span>
-                  <span><strong>Njeri Kamau</strong><small>Founder, Kijani Ventures</small></span>
-                </footer>
-              </article>
-            </div>
+            <div class="testimonial-track"><?php njc_render_reviews(); ?></div>
           </div>
         </div>
       </section>

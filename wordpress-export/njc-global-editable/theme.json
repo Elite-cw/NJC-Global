@@ -11,8 +11,10 @@
       "palette": [
         { "slug": "njc-green", "name": "NJC Green", "color": "#064e3b" },
         { "slug": "njc-ink", "name": "NJC Ink", "color": "#14352c" },
-        { "slug": "njc-cream", "name": "NJC Cream", "color": "#f5f1e7" },
-        { "slug": "njc-gold", "name": "NJC Gold", "color": "#d5a84b" },
+        { "slug": "njc-cream", "name": "NJC Cream", "color": "#f8f5ed" },
+        { "slug": "njc-gold", "name": "NJC Gold on Light", "color": "#b67d35" },
+        { "slug": "njc-gold-bright", "name": "NJC Gold on Dark", "color": "#feaf35" },
+        { "slug": "njc-gold-soft", "name": "NJC Soft Gold", "color": "#ffcf88" },
         { "slug": "white", "name": "White", "color": "#ffffff" }
       ]
     },
@@ -25,7 +27,7 @@
   },
   "styles": {
     "color": {
-      "background": "#ffffff",
+      "background": "#f8f5ed",
       "text": "#14352c"
     },
     "typography": {

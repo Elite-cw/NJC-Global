@@ -10,7 +10,7 @@
   const privacyUrl = themeRuntime.privacyUrl || `${pagePrefix}privacy.html`;
   const termsUrl = themeRuntime.termsUrl || `${pagePrefix}terms.html`;
 
-  const peopleDirectory = Object.freeze({
+  const defaultPeopleDirectory = {
     team: [
       {
         id: 'team-joyce-chiamaka-nwezeh',
@@ -23,44 +23,41 @@
       },
       {
         id: 'team-daniel-friday',
-        name: 'Daniel Friday',
+        name: 'Daniel Ugochi',
         role: 'Team',
         image: 'assets/images/team/daniel-friday.jpg',
-        imageAlt: 'Profile placeholder for Daniel Friday',
+        imageAlt: 'Profile placeholder for Daniel Ugochi',
         width: 1254,
         height: 1254
       },
       {
         id: 'team-daniel-nwezeh',
-        name: 'Daniel Nwezeh',
+        name: 'Sullivan Agbata',
         role: 'Team',
-        image: 'assets/images/team/daniel-nwezeh.jpg',
-        imageAlt: 'Profile placeholder for Daniel Nwezeh',
+        image: 'assets/images/team/sullivan-agbata.jpg',
+        imageAlt: 'Portrait of Sullivan Agbata',
         width: 1254,
         height: 1254
       }
     ],
     partners: [
-      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Partner' },
-      {
-        id: 'partner-abongwa-celestine',
-        name: 'Abongwa Celestin',
-        role: 'Founder & Visionary Leader, RenewBerry',
-        location: 'Cameroon',
-        bio: 'Empowering creators and spreading hope through visual storytelling.',
-        image: 'assets/images/team/abongwa-celestin.jpg',
-        imageAlt: 'Portrait of Abongwa Celestin, Founder and Visionary Leader at RenewBerry',
-        width: 1122,
-        height: 1402
-      }
+      { id: 'partner-jimi-obawole', name: 'Jimi Obawole', role: 'Founder, Nia Nexus Africa', location: 'US' },
+      { id: 'partner-winifred-gaillard', name: 'Winifred Gaillard', role: 'Founder, The AfrikaFora', location: 'France', image: 'assets/images/partners/winifred-uloaku-gaillard.jpg', imageAlt: 'Portrait of Winifred Gaillard', width: 200, height: 200 },
+      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Country Director, CBW Africa, Zimbabwe Chapter', location: 'South Africa', image: 'assets/images/partners/angeline-mhlanga.jpg', imageAlt: 'Portrait of Angeline Mhlanga', width: 1070, height: 1337 }
     ]
-  });
+  };
+  const peopleDirectory = Object.freeze(themeRuntime.peopleDirectory || defaultPeopleDirectory);
 
   function renderPortrait(person, className) {
     if (person.image) {
+      const imagePath = /^(?:https?:|data:|blob:)/i.test(person.image)
+        ? person.image
+        : themeRuntime.assetUrl
+          ? `${assetPrefix}${person.image.replace(/^assets\//, '')}`
+          : `${assetPrefix}${person.image}`;
       return `
         <span class="${className} has-image">
-          <img src="${assetPrefix}${person.image}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy">
+          <img src="${imagePath}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy">
         </span>
       `;
     }
@@ -99,12 +96,12 @@
 
     grid.innerHTML = people.map((person) => `
       <article class="team-member-card" id="${person.id}">
-        ${renderPortrait(person, 'team-member-portrait')}
+        ${person.id === 'partner-jimi-obawole' ? '' : renderPortrait(person, 'team-member-portrait')}
         <div class="team-member-copy">
           <small>${person.role}</small>
           <h3>${person.name}</h3>
           ${person.location ? `<span class="team-member-location">${person.location}</span>` : ''}
-          ${person.bio ? `<p>${person.bio}</p>` : ''}
+          ${grid.dataset.peopleGroup !== 'partners' && person.bio ? `<p>${person.bio}</p>` : ''}
         </div>
       </article>
     `).join('');
@@ -184,27 +181,15 @@
     });
   });
 
-  const loader = document.createElement('div');
-
-  loader.className = 'page-loader';
-  loader.setAttribute('role', 'status');
-  loader.setAttribute('aria-live', 'polite');
-  loader.setAttribute('aria-hidden', 'true');
-  loader.innerHTML = `
-    <div class="page-loader-panel">
-      <span class="page-loader-mark" aria-hidden="true"></span>
-      <span class="page-loader-label">Preparing your experience</span>
-      <span class="page-loader-progress" aria-hidden="true"><i></i></span>
-    </div>
-  `;
-
-  document.body.appendChild(loader);
+  const loader = document.querySelector('[data-njc-page-loader]');
 
   let revealTimer;
   let safetyTimer;
   let navigating = false;
 
   function showLoader(immediate = false) {
+    if (!loader) return;
+
     window.clearTimeout(revealTimer);
     window.clearTimeout(safetyTimer);
 
@@ -223,6 +208,8 @@
   }
 
   function hideLoader() {
+    if (!loader) return;
+
     window.clearTimeout(revealTimer);
     window.clearTimeout(safetyTimer);
     loader.classList.remove('is-visible');
@@ -346,6 +333,50 @@
         });
       });
     });
+  });
+
+
+  const reviewDialog = document.createElement('dialog');
+  reviewDialog.id = 'review-dialog';
+  reviewDialog.className = 'review-dialog';
+  reviewDialog.setAttribute('aria-labelledby', 'review-dialog-title');
+  reviewDialog.innerHTML = '<div class="review-dialog-header"><div><p class="eyebrow">Client review</p><h2 id="review-dialog-title"></h2><p class="review-dialog-role"></p></div><button class="review-dialog-close" type="button" autofocus aria-label="Close review"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div><blockquote class="review-dialog-text"></blockquote>';
+  document.body.appendChild(reviewDialog);
+  let reviewTrigger;
+  reviewDialog.querySelector('.review-dialog-close').addEventListener('click', () => reviewDialog.close());
+  reviewDialog.addEventListener('click', (event) => {
+    const bounds = reviewDialog.getBoundingClientRect();
+    if (event.target === reviewDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) reviewDialog.close();
+  });
+  reviewDialog.addEventListener('close', () => {
+    document.body.classList.remove('review-modal-open');
+    reviewTrigger?.focus({ preventScroll: true });
+  });
+  document.querySelectorAll('.testimonial-bubble').forEach((bubble) => {
+    const quote = bubble.querySelector('blockquote');
+    if (!quote) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'testimonial-more';
+    button.textContent = 'See more';
+    button.setAttribute('aria-controls', reviewDialog.id);
+    button.setAttribute('aria-haspopup', 'dialog');
+    quote.after(button);
+    const update = () => { button.hidden = quote.scrollHeight <= quote.clientHeight + 1; };
+    button.addEventListener('click', () => {
+      const author = bubble.closest('.testimonial-slide').querySelector('.testimonial-author');
+      reviewDialog.querySelector('h2').textContent = author?.querySelector('strong')?.textContent || 'Client review';
+      reviewDialog.querySelector('.review-dialog-role').textContent = author?.querySelector('small')?.textContent || '';
+      reviewDialog.querySelector('.review-dialog-text').textContent = quote.textContent;
+      reviewTrigger = button;
+      reviewDialog.showModal();
+      reviewDialog.scrollTop = 0;
+      document.body.classList.add('review-modal-open');
+    });
+    new ResizeObserver(update).observe(quote);
+    new MutationObserver(update).observe(quote, { childList: true, characterData: true, subtree: true });
+    document.fonts.ready.then(update);
+    update();
   });
 
   document.querySelectorAll('[data-testimonial-slider]').forEach((slider) => {

@@ -9,7 +9,7 @@
 	<div class="container footer-grid">
 		<div>
 			<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="brand-logo" aria-hidden="true"></span><span class="sr-only"><?php bloginfo( 'name' ); ?></span></a>
-			<p><?php esc_html_e( 'Pioneering African excellence through media, events, and talent execution.', 'njc-global' ); ?></p>
+			<p><?php echo esc_html( njc_get_copy( 'footer_tagline' ) ); ?></p>
 		</div>
 		<div>
 			<h3><?php esc_html_e( 'Projects & Events', 'njc-global' ); ?></h3>
@@ -19,13 +19,13 @@
 		<div>
 			<h3><?php esc_html_e( 'Connect', 'njc-global' ); ?></h3>
 			<a href="<?php echo esc_url( njc_page_url( 'contact-us' ) ); ?>"><?php esc_html_e( 'Contact us', 'njc-global' ); ?></a>
-			<a href="mailto:info@njcglobal.site">info@njcglobal.site</a>
-			<a href="https://www.linkedin.com/company/njc-global/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'LinkedIn', 'njc-global' ); ?></a>
-			<a href="https://www.instagram.com/njcglobal?stkn=MWZxZnlibXY5bG5xZQ==" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Instagram', 'njc-global' ); ?></a>
+			<a href="mailto:<?php echo esc_attr( antispambot( njc_get_contact( 'email' ) ) ); ?>"><?php echo esc_html( antispambot( njc_get_contact( 'email' ) ) ); ?></a>
+			<a href="<?php echo esc_url( njc_get_contact( 'linkedin' ) ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'LinkedIn', 'njc-global' ); ?></a>
+			<a href="<?php echo esc_url( njc_get_contact( 'instagram' ) ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Instagram', 'njc-global' ); ?></a>
 		</div>
 		<form class="njc-server-form" data-njc-server-form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
-			<h3><?php esc_html_e( 'Stay Connected', 'njc-global' ); ?></h3>
-			<p><?php esc_html_e( 'Join our inner circle for updates on African excellence.', 'njc-global' ); ?></p>
+			<h3><?php echo esc_html( njc_get_copy( 'footer_newsletter_title' ) ); ?></h3>
+			<p><?php echo esc_html( njc_get_copy( 'footer_newsletter_intro' ) ); ?></p>
 			<label for="footer-email"><?php esc_html_e( 'Email Address', 'njc-global' ); ?></label>
 			<div>
 				<input id="footer-email" name="email" type="email" placeholder="Email Address" autocomplete="email" required>

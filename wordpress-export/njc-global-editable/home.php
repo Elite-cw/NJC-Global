@@ -11,7 +11,7 @@ $articles_query = new WP_Query(
 	array(
 		'post_type'           => 'post',
 		'post_status'         => 'publish',
-		'posts_per_page'      => (int) get_option( 'posts_per_page', 10 ),
+		'posts_per_page'      => 12,
 		'paged'               => $paged,
 		'ignore_sticky_posts' => true,
 	)
@@ -40,7 +40,6 @@ $featured_query = new WP_Query(
 					<div class="featured-blog-copy">
 						<div class="blog-meta"><span><?php echo esc_html( $featured_categories ? $featured_categories[0]->name : __( 'Insights', 'njc-global' ) ); ?></span><small><i class="material-symbols-outlined">schedule</i> <?php echo esc_html( njc_estimated_read_time() ); ?> <?php esc_html_e( 'min read', 'njc-global' ); ?></small></div>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<p><?php echo esc_html( njc_excerpt( get_the_ID(), 34 ) ); ?></p>
 						<div class="blog-author-row">
 							<div class="blog-author"><span><?php echo esc_html( strtoupper( substr( get_the_author_meta( 'display_name' ), 0, 2 ) ) ); ?></span><p><strong><?php the_author(); ?></strong><small><?php echo esc_html( get_the_date() ); ?></small></p></div>
 							<a class="text-link" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read story', 'njc-global' ); ?> →</a>
