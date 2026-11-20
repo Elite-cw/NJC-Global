@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Event details, schedules, locations, and registration information for NJC Global events.">
+    <title>Nzuko Afrika Festival 2027 | NJC Global</title>
+    <link rel="icon" type="image/png" href="../assets/images/njc-global.png?v=20260824-1">
+    <link rel="apple-touch-icon" href="../assets/images/njc-global.png?v=20260824-1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:FILL@0..1&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css?v=20261120-review-ellipsis">
+    <script src="../assets/js/site.js?v=20261120-material-close" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html"><span class="brand-logo" aria-hidden="true"></span><span class="sr-only">NJC Global</span></a>
+        <button class="menu" type="button" aria-expanded="false" aria-controls="nav"><span class="material-symbols-outlined">menu</span><i>Menu</i></button>
+        <nav id="nav" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a class="active" href="events.html">Events</a>
+          <a href="about-us.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <a class="button nav-cta" href="contact-us.html#work-with-us">Work with us</a>
+      </div>
+    </header>
+
+    <main class="event-details-page">
+      <section class="event-details-hero">
+        <div class="container event-details-grid">
+          <div>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="events.html">Events</a></li><li aria-current="page">Nzuko Afrika Festival 2027</li></ol></nav>
+            <p class="eyebrow">Cultural Festival</p>
+            <h1>Nzuko Afrika Festival 2027</h1>
+            <p class="event-details-lead">African Heritage, Art &amp; Corporate Connections</p>
+            <div class="event-detail-meta"><span><span class="material-symbols-outlined">calendar_today</span>May 2027</span><span><span class="material-symbols-outlined">location_on</span>Morocco</span></div>
+            <a class="button" href="contact-us.html#work-with-us">Register Your Interest</a>
+          </div>
+          <div class="event-detail-mockup"><div class="event-detail-image"></div></div>
+        </div>
+      </section>
+      <section class="related-event-detail"><div class="container"><p class="eyebrow">Upcoming Event</p><h2>Event Details</h2><p>For the first time in its history, the Nzuko Africa Festival is stepping out of Paris and heading to Morocco for its highly anticipated 2027 edition. This monumental shift promises to bring African heritage, art, and corporate connections to a vibrant new setting on the continent. Attendees can look forward to a rich cultural immersion combined with high-level networking opportunities as the festival establishes its new home. Keep in touch for more updates and exciting announcements as the event approaches.</p></div></section>
+      <section class="related-event-detail dark-related-event"><div class="container"><p class="eyebrow">NJC Global</p><h2>Our Role</h2><p>To ensure this landmark transition to Morocco achieves maximum global reach, NJC Global is actively strategizing the comprehensive campaign and media roll-out. Our team is crafting the overarching media strategy and bespoke digital assets designed to engage an expanded international audience and elevate the festival&#x27;s digital and physical presence leading up to May 2027.</p></div></section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div><a class="brand" href="../index.html"><span class="brand-logo" aria-hidden="true"></span><span class="sr-only">NJC Global</span></a><p>Pioneering African excellence through high-impact talent execution and world-class media curation.</p></div>
+        <div><h3>Projects &amp; Events</h3><a href="projects.html">Projects</a><a href="events.html">Events</a></div>
+        <div><h3>Work With Us</h3><a href="contact-us.html#work-with-us">Talent Solutions</a><a href="contact-us.html#work-with-us">Strategic Advisory</a><a href="contact-us.html#work-with-us">Partnership Inquiries</a></div>
+        <form><h3>Stay Connected</h3><p>Join our inner circle for updates on African excellence.</p><label for="details-email">Email Address</label><div><input id="details-email" type="email" placeholder="Email Address" required><button type="submit" aria-label="Join newsletter"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button></div></form>
+      </div>
+      <div class="container footer-bottom"><p>© 2026 NJC Global. All rights reserved.</p><p><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></p></div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector('.menu');
+      const navigation = document.querySelector('nav');
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        navigation.classList.toggle('open', !isOpen);
+        menuButton.firstElementChild.textContent = isOpen ? 'menu' : 'close';
+      });
+
+      document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        event.currentTarget.querySelector('button').textContent = 'Joined';
+        event.currentTarget.querySelector('input').value = '';
+      });
+    </script>
+  <script src="../assets/js/newsletter.js?v=20261120-newsletter-hierarchy" defer></script>
+</body>
+</html>

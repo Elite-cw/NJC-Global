@@ -127,7 +127,6 @@
   document.querySelector('[data-article-title]').textContent = article.title;
   document.querySelector('[data-article-author]').textContent = article.author;
   document.querySelector('[data-article-time]').textContent = article.readTime;
-  document.querySelector('[data-article-summary]').textContent = article.summary;
   document.querySelector('[data-article-content]').innerHTML = article.sections.map(([heading, body]) => `
     <section>
       <h2>${heading}</h2>

@@ -8,9 +8,9 @@
     <link rel="apple-touch-icon" href="../assets/images/njc-global.png?v=20260824-1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260912-1">
-    <script src="../assets/js/site.js?v=20260907-7" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:FILL@0..1&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css?v=20261120-review-ellipsis">
+    <script src="../assets/js/site.js?v=20261120-material-close" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -43,7 +43,6 @@
             <div class="featured-blog-copy">
               <div class="blog-meta"><span>Insights</span><small><i class="material-symbols-outlined">schedule</i> 7 min read</small></div>
               <h2><a href="amplifying-african-excellence.html">Amplifying African Excellence: Your Path to Global Visibility</a></h2>
-              <p>How clear positioning and storytelling create global opportunity.</p>
               <div class="blog-author-row">
                 <div class="blog-author">
                   <span class="blog-author-avatar"><img src="../assets/images/team/joycepic1.jpg" alt="Portrait of Joyce Chiamaka Nwezeh" width="4016" height="5572"></span>
@@ -194,12 +193,12 @@
         articles.forEach((article) => {
           const matches = (activeCategory === 'all' || article.dataset.category === activeCategory) && (!query || article.dataset.search.includes(query));
           if (matches) totalMatches += 1;
-          const shouldShow = matches && (showAllArticles || visibleMatches < 6);
+          const shouldShow = matches && (showAllArticles || visibleMatches < 12);
           article.hidden = !shouldShow;
           if (shouldShow) visibleMatches += 1;
         });
         emptyState.hidden = totalMatches !== 0;
-        loadMoreButton.hidden = showAllArticles || totalMatches <= 6;
+        loadMoreButton.hidden = showAllArticles || totalMatches <= 12;
       }
 
       filterButtons.forEach((button) => button.addEventListener('click', () => {
@@ -248,5 +247,6 @@
       }));
       updateArticles();
     </script>
-  </body>
+  <script src="../assets/js/newsletter.js?v=20261120-newsletter-hierarchy" defer></script>
+</body>
 </html>

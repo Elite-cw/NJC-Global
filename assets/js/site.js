@@ -28,10 +28,10 @@
       },
       {
         id: 'team-daniel-nwezeh',
-        name: 'Daniel Nwezeh',
+        name: 'Sullivan Agbata',
         role: 'Team',
-        image: 'assets/images/team/daniel-nwezeh.png',
-        imageAlt: 'Profile placeholder for Daniel Nwezeh',
+        image: 'assets/images/team/sullivan-agbata.jpg',
+        imageAlt: 'Portrait of Sullivan Agbata',
         width: 1254,
         height: 1254
       }
@@ -188,7 +188,7 @@
   loader.setAttribute('aria-hidden', 'true');
   loader.innerHTML = `
     <div class="page-loader-panel">
-      <span class="page-loader-mark" aria-hidden="true"></span>
+      <span class="page-loader-mark" aria-hidden="true"><svg class="loader-globe" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="loader-orbit-back"><rect x="-80" y="-80" width="160" height="80"/></clipPath><clipPath id="loader-orbit-front"><rect x="-80" y="0" width="160" height="80"/></clipPath></defs><g transform="translate(60 60) rotate(-25) scale(1 .42)"><g clip-path="url(#loader-orbit-back)"><circle r="52" stroke="var(--cream, #f8f5ed)" stroke-width="11"/><circle r="52" stroke="currentColor" stroke-width="4"/><g class="loader-globe-arrow"><path d="M-5-52H8" stroke="var(--cream, #f8f5ed)" stroke-width="12" stroke-linecap="round"/><path d="M-5-52H8" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M5-64 21-52 5-40Z" fill="currentColor"/></g></g></g><circle cx="60" cy="60" r="39" fill="currentColor"/><path d="M41 25 51 24 54 31 50 37 57 43 68 40 73 47 72 54 80 61 75 70 69 72 66 87 58 96 53 85 51 74 44 68 42 58 34 53 29 44 33 34Z M78 28 87 33 94 43 86 44 80 38Z M82 76 87 80 84 91 80 93Z" fill="var(--cream, #f8f5ed)"/><g transform="translate(60 60) rotate(-25) scale(1 .42)"><g clip-path="url(#loader-orbit-front)"><circle r="52" stroke="var(--cream, #f8f5ed)" stroke-width="11"/><circle r="52" stroke="currentColor" stroke-width="4"/><g class="loader-globe-arrow"><path d="M-5-52H8" stroke="var(--cream, #f8f5ed)" stroke-width="12" stroke-linecap="round"/><path d="M-5-52H8" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M5-64 21-52 5-40Z" fill="currentColor"/></g></g></g></svg></span>
       <span class="page-loader-label">Preparing your experience</span>
       <span class="page-loader-progress" aria-hidden="true"><i></i></span>
     </div>
@@ -342,6 +342,50 @@
         });
       });
     });
+  });
+
+
+  const reviewDialog = document.createElement('dialog');
+  reviewDialog.id = 'review-dialog';
+  reviewDialog.className = 'review-dialog';
+  reviewDialog.setAttribute('aria-labelledby', 'review-dialog-title');
+  reviewDialog.innerHTML = '<div class="review-dialog-header"><div><p class="eyebrow">Client review</p><h2 id="review-dialog-title"></h2><p class="review-dialog-role"></p></div><button class="review-dialog-close" type="button" autofocus aria-label="Close review"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div><blockquote class="review-dialog-text"></blockquote>';
+  document.body.appendChild(reviewDialog);
+  let reviewTrigger;
+  reviewDialog.querySelector('.review-dialog-close').addEventListener('click', () => reviewDialog.close());
+  reviewDialog.addEventListener('click', (event) => {
+    const bounds = reviewDialog.getBoundingClientRect();
+    if (event.target === reviewDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) reviewDialog.close();
+  });
+  reviewDialog.addEventListener('close', () => {
+    document.body.classList.remove('review-modal-open');
+    reviewTrigger?.focus({ preventScroll: true });
+  });
+  document.querySelectorAll('.testimonial-bubble').forEach((bubble) => {
+    const quote = bubble.querySelector('blockquote');
+    if (!quote) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'testimonial-more';
+    button.textContent = 'See more';
+    button.setAttribute('aria-controls', reviewDialog.id);
+    button.setAttribute('aria-haspopup', 'dialog');
+    quote.after(button);
+    const update = () => { button.hidden = quote.scrollHeight <= quote.clientHeight + 1; };
+    button.addEventListener('click', () => {
+      const author = bubble.closest('.testimonial-slide').querySelector('.testimonial-author');
+      reviewDialog.querySelector('h2').textContent = author?.querySelector('strong')?.textContent || 'Client review';
+      reviewDialog.querySelector('.review-dialog-role').textContent = author?.querySelector('small')?.textContent || '';
+      reviewDialog.querySelector('.review-dialog-text').textContent = quote.textContent;
+      reviewTrigger = button;
+      reviewDialog.showModal();
+      reviewDialog.scrollTop = 0;
+      document.body.classList.add('review-modal-open');
+    });
+    new ResizeObserver(update).observe(quote);
+    new MutationObserver(update).observe(quote, { childList: true, characterData: true, subtree: true });
+    document.fonts.ready.then(update);
+    update();
   });
 
   document.querySelectorAll('[data-testimonial-slider]').forEach((slider) => {
