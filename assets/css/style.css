@@ -2418,7 +2418,7 @@ nav a:after {
     url('../images/optimized/african-summit-hero-8bbf5e.webp') center / cover;
   box-shadow: 0 32px 80px rgba(6,44,34,.2);
   filter: saturate(.92) contrast(1.04);
-  animation: events-hero-breathe 12s ease-in-out infinite alternate
+  animation: none
 }
 
 .events-hero-copy {
@@ -2464,7 +2464,7 @@ nav a:after {
   color: var(--green);
   box-shadow: 0 16px 38px rgba(6,44,34,.16);
   backdrop-filter: blur(12px);
-  animation: label-float 6.5s ease-in-out infinite
+  animation: none
 }
 
 .events-hero-badge .material-symbols-outlined {
