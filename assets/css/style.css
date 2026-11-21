@@ -1582,7 +1582,7 @@ nav a:after {
   overflow: hidden;
   border: 0;
   border-radius: 0;
-  background-image: url('../images/about-hero-triptych.png');
+  background-image: url('../images/optimized/about-hero-triptych-f33ff0.webp');
   background-repeat: no-repeat;
   background-size: 300% 100%;
   box-shadow: none;
@@ -2415,7 +2415,7 @@ nav a:after {
   background:
     linear-gradient(90deg, rgba(3,39,30,.82), rgba(3,39,30,.38) 62%, rgba(3,39,30,.15)),
     linear-gradient(180deg, rgba(3,39,30,.08) 25%, rgba(3,39,30,.62)),
-    url('../images/events/african-summit-hero.jpg') center / cover;
+    url('../images/optimized/african-summit-hero-8bbf5e.webp') center / cover;
   box-shadow: 0 32px 80px rgba(6,44,34,.2);
   filter: saturate(.92) contrast(1.04);
   animation: events-hero-breathe 12s ease-in-out infinite alternate
@@ -2988,7 +2988,7 @@ nav a:after {
 }
 
 .workshop-thumb {
-  background-image: linear-gradient(140deg, rgba(6,78,59,.25), rgba(210,109,23,.2)), url('../images/stock/d15f398669706ffc.jpg')
+  background-image: linear-gradient(140deg, rgba(6,78,59,.25), rgba(210,109,23,.2)), url('../images/optimized/d15f398669706ffc-33f665.webp')
 }
 
 .gala-thumb {
@@ -4444,7 +4444,7 @@ nav a:after {
 .service-tile:hover { transform:scale(1.018); box-shadow:var(--shadow) }
 .service-tile small,.service-tile h3 { position:relative; z-index:1 }
 .service-tile h3 { margin:8px 0 0; font:600 34px/1.08 var(--serif) }
-.tile-one{background-image:url('../images/stock/f797e3610526d7ba.jpg')}.tile-two{background-image:url('../images/stock/54886b3aabbbce5f.jpg')}.tile-three{background-image:url('../images/stock/0c42f76f57d3eaee.jpg')}.tile-four{background-image:url('../images/stock/33ed8fadef07666a.jpg')}.tile-five{background-image:url('../images/stock/ed0c030061238776.jpg')}.tile-six{background-image:url('../images/stock/6e8ce0472ea1ed72.jpg')}
+.tile-one{background-image:url('../images/stock/f797e3610526d7ba.jpg')}.tile-two{background-image:url('../images/stock/54886b3aabbbce5f.jpg')}.tile-three{background-image:url('../images/stock/0c42f76f57d3eaee.jpg')}.tile-four{background-image:url('../images/stock/33ed8fadef07666a.jpg')}.tile-five{background-image:url('../images/stock/ed0c030061238776.jpg')}.tile-six{background-image:url('../images/optimized/6e8ce0472ea1ed72-03bcdb.webp')}
 .mission-section { background:var(--surface-cream) }
 .mission-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:80px }
 .mission-grid h2 { margin:12px 0 18px }
@@ -4481,7 +4481,7 @@ nav a:after {
 .blog-hero-heading h1 em { color: var(--brand-yellow-deep) }
 .blog-hero-heading>p:last-child { max-width: 680px; color: var(--muted); font-size: 19px }
 .featured-blog-card { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; border-radius: 30px; background: var(--white); box-shadow: var(--shadow) }
-.featured-blog-image { display: block; min-height: 570px; border-radius: 30px; background: linear-gradient(180deg,transparent 50%,rgba(6,44,34,.3)),url('../images/stock/6f93a434daf0c74c.jpg') center/cover }
+.featured-blog-image { display: block; min-height: 570px; border-radius: 30px; background: linear-gradient(180deg,transparent 50%,rgba(6,44,34,.3)),url('../images/optimized/6f93a434daf0c74c-b3cbed.webp') center/cover }
 .featured-blog-copy { position: relative; z-index: 1; margin-left: -54px; padding: 46px; border-left: 5px solid var(--green); border-radius: 25px; background: var(--cream); box-shadow: 0 24px 60px rgba(6,44,34,.16) }
 .featured-blog-copy h2 { margin: 20px 0; font-size: clamp(31px,3.2vw,46px); line-height: 1.08 }
 .featured-blog-copy h2 a { color: inherit; transition: color .25s ease }
@@ -6532,7 +6532,7 @@ img.resource-loaded {
 }
 
 .brand-growth {
-  background-image: linear-gradient(180deg, rgba(6, 78, 59, .08), rgba(6, 78, 59, .26)), url('../images/stock/21fa6158832348f9.jpg')
+  background-image: linear-gradient(180deg, rgba(6, 78, 59, .08), rgba(6, 78, 59, .26)), url('../images/optimized/21fa6158832348f9-69382d.webp')
 }
 
 .home-work,
@@ -7272,8 +7272,8 @@ img.resource-loaded {
 @media (prefers-reduced-motion: reduce) { .loader-globe-arrow { animation: none; } }
 
 /* Approved homepage photos; retain the existing layered composition. */
-.hero-main { background-image: linear-gradient(180deg,transparent 45%,rgba(2,42,31,.6)),url('../images/home-front.jpg'); }
-.hero-small { background-image: url('../images/home-back.jpg'); background-position: left center; }
+.hero-main { background-image: linear-gradient(180deg,transparent 45%,rgba(2,42,31,.6)),url('../images/optimized/home-front-762e53.webp'); }
+.hero-small { background-image: url('../images/optimized/home-back-730920.webp'); background-position: left center; }
 
 .event-media-gallery { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); align-items:start; gap:24px; margin-top:28px; }
 .event-media-gallery a { display:block; border-radius:20px; overflow:hidden; background:var(--white); }
@@ -7282,7 +7282,7 @@ img.resource-loaded {
 @media(max-width:1000px) { .event-media-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:620px) { .event-media-gallery { grid-template-columns:1fr; } }
 
-.projects-hero-art { background-image:linear-gradient(180deg,rgba(6,78,59,.02) 35%,rgba(3,45,34,.88)),url('../images/projects-summit.jpg'); background-position:center 32%; }
+.projects-hero-art { background-image:linear-gradient(180deg,rgba(6,78,59,.02) 35%,rgba(3,45,34,.88)),url('../images/optimized/projects-summit-0f441b.webp'); background-position:center 32%; }
 
 .testimonial-avatar img { width:100%; height:100%; object-fit:cover; border-radius:inherit; }
 .testimonial-bubble blockquote { white-space:pre-line; }
@@ -7378,26 +7378,26 @@ footer .footer-grid > .newsletter-signup > a.newsletter-footer-link { display:in
 
 #partner-jimi-obawole.team-member-card { align-self:start; }
 
-.contact-image-card > div { background-image:linear-gradient(180deg,transparent 35%,rgba(3,44,32,.88)),url('../images/home-back.jpg'); background-position:center; }
+.contact-image-card > div { background-image:linear-gradient(180deg,transparent 35%,rgba(3,44,32,.88)),url('../images/optimized/home-back-730920.webp'); background-position:center; }
 
 .about-photo-women { background-image:url('../images/about-joyce-speaking.jpg'); background-size:cover; background-position:42% center; }
 
 /* Crop within the fixed portrait frame instead of clipping a tall image from its top. */
 .team-member-portrait.has-image img { position:absolute; inset:0; width:100%; height:100%; border-radius:0; object-fit:cover; object-position:center center; }
 
-.about-photo-women::after { content:''; position:absolute; inset:0; background:url('../images/about-womens-leadership-summit.jpg') 53% center/cover no-repeat; opacity:0; animation:about-middle-crossfade 12s ease-in-out infinite; }
+.about-photo-women::after { content:''; position:absolute; inset:0; background:url('../images/optimized/about-womens-leadership-summit-8ca55a.webp') 53% center/cover no-repeat; opacity:0; animation:about-middle-crossfade 12s ease-in-out infinite; }
 @keyframes about-middle-crossfade { 0%,40%,100% { opacity:0; } 50%,90% { opacity:1; } }
 .about-photo-women:hover::after { animation-play-state:paused; }
 @media(prefers-reduced-motion:reduce) { .about-photo-women::after { animation:none; } }
 
-.contact-image-card > div::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,rgba(3,44,32,.88)),url('../images/contact-womens-leadership.jpg') center/cover no-repeat; opacity:0; animation:contact-photo-crossfade 12s ease-in-out infinite; }
+.contact-image-card > div::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,rgba(3,44,32,.88)),url('../images/optimized/contact-womens-leadership-f9e5b0.webp') center/cover no-repeat; opacity:0; animation:contact-photo-crossfade 12s ease-in-out infinite; }
 @keyframes contact-photo-crossfade { 0%,40%,100% { opacity:0; } 50%,90% { opacity:1; } }
 .contact-image-card:hover > div::after { animation-play-state:paused; }
 @media(prefers-reduced-motion:reduce) { .contact-image-card > div::after { animation:none; } }
 
 /* Show the two supplied summit photographs together. */
 .about-photo-event { left:0; width:54%; background-image:url('../images/about-joyce-speaking.jpg'); background-size:cover; background-position:42% center; clip-path:polygon(0 0,100% 0,90% 100%,0 100%); }
-.about-photo-women { left:46%; width:54%; background-image:url('../images/about-womens-leadership-summit.jpg'); background-size:cover; background-position:53% center; clip-path:polygon(10% 0,100% 0,100% 100%,0 100%); }
+.about-photo-women { left:46%; width:54%; background-image:url('../images/optimized/about-womens-leadership-summit-8ca55a.webp'); background-size:cover; background-position:53% center; clip-path:polygon(10% 0,100% 0,100% 100%,0 100%); }
 .about-photo-women::after { content:none; animation:none; }
 
 .page-loader-panel { min-width:0; padding:0; gap:0; border:0; border-radius:0; background:transparent; box-shadow:none; }

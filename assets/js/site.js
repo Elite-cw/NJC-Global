@@ -11,7 +11,7 @@
         id: 'team-joyce-chiamaka-nwezeh',
         name: 'Joyce Chiamaka Nwezeh',
         role: 'Founder & Managing Partner',
-        image: 'assets/images/team/joycepic1.jpg',
+        image: 'assets/images/optimized/joycepic1-bdaf44.webp',
         imageAlt: 'Portrait of Joyce Chiamaka Nwezeh',
         width: 4016,
         height: 5572
@@ -20,8 +20,8 @@
         id: 'team-daniel-friday',
         name: 'Daniel Ugochi',
         role: 'Team',
-        image: 'assets/images/team/daniel-friday.png',
-        imageAlt: 'Profile placeholder for Daniel Ugochi',
+        image: 'assets/images/optimized/daniel-friday-972286.webp',
+        imageAlt: 'Portrait of Daniel Ugochi',
         width: 1254,
         height: 1254
       },
@@ -38,7 +38,7 @@
     partners: [
       { id: 'partner-jimi-obawole', name: 'Jimi Obawole', role: 'Founder, Nia Nexus Africa', location: 'US' },
       { id: 'partner-winifred-gaillard', name: 'Winifred Gaillard', role: 'Founder, The AfrikaFora', location: 'France', image: 'assets/images/partners/winifred-uloaku-gaillard.jpg', imageAlt: 'Portrait of Winifred Gaillard', width: 200, height: 200 },
-      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Country Director, CBW Africa, Zimbabwe Chapter', location: 'South Africa', image: 'assets/images/partners/angeline-mhlanga.jpg', imageAlt: 'Portrait of Angeline Mhlanga', width: 1070, height: 1337 }
+      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Country Director, CBW Africa, Zimbabwe Chapter', location: 'South Africa', image: 'assets/images/optimized/angeline-mhlanga-6fe864.webp', imageAlt: 'Portrait of Angeline Mhlanga', width: 1070, height: 1337 }
     ]
   });
 
@@ -46,7 +46,7 @@
     if (person.image) {
       return `
         <span class="${className} has-image">
-          <img src="${new URL(person.image, siteRoot).href}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy">
+          <img src="${new URL(person.image, siteRoot).href}" alt="${person.imageAlt}" width="${person.width}" height="${person.height}" loading="lazy" decoding="async">
         </span>
       `;
     }
