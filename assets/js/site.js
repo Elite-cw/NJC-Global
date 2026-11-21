@@ -36,9 +36,10 @@
       }
     ],
     partners: [
-      { id: 'partner-jimi-obawole', name: 'Jimi Obawole', role: 'Founder, Nia Nexus Africa', location: 'US' },
+      { id: 'partner-jimi-obawole', name: 'Jimi Obawole', role: 'Founder, Nia Nexus Africa', location: 'US', image: 'assets/images/nia-nexus-project.jpg', imageAlt: 'Nia Nexus logo representing founder Jimi Obawole', width: 1600, height: 1600 },
       { id: 'partner-winifred-gaillard', name: 'Winifred Gaillard', role: 'Founder, The AfrikaFora', location: 'France', image: 'assets/images/partners/winifred-uloaku-gaillard.jpg', imageAlt: 'Portrait of Winifred Gaillard', width: 200, height: 200 },
-      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Country Director, CBW Africa, Zimbabwe Chapter', location: 'South Africa', image: 'assets/images/optimized/angeline-mhlanga-6fe864.webp', imageAlt: 'Portrait of Angeline Mhlanga', width: 1070, height: 1337 }
+      { id: 'partner-angeline-mhlanga', name: 'Angeline Mhlanga', role: 'Country Director, CBW Africa, Zimbabwe Chapter', location: 'South Africa', image: 'assets/images/optimized/angeline-mhlanga-6fe864.webp', imageAlt: 'Portrait of Angeline Mhlanga', width: 1070, height: 1337 },
+      { id: 'partner-abongwa-celestine', name: 'Abongwa Celestin', role: 'Founder & Visionary Leader, RenewBerry', location: 'Cameroon', image: 'assets/images/optimized/abongwa-celestin.webp', imageAlt: 'Portrait of Abongwa Celestin', width: 1122, height: 1402 }
     ]
   });
 
@@ -85,7 +86,7 @@
 
     grid.innerHTML = people.map((person) => `
       <article class="team-member-card" id="${person.id}">
-        ${person.id === 'partner-jimi-obawole' ? '' : renderPortrait(person, 'team-member-portrait')}
+        ${renderPortrait(person, 'team-member-portrait')}
         <div class="team-member-copy">
           <small>${person.role}</small>
           <h3>${person.name}</h3>
