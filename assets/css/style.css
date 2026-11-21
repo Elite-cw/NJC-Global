@@ -5347,6 +5347,14 @@ img.resource-loaded {
   --partner-accent: rgba(206,190,103,.28)
 }
 
+.partner-preview-card-f {
+  --partner-accent: rgba(89,173,215,.28)
+}
+
+.partner-preview-card-g {
+  --partner-accent: rgba(206,190,103,.28)
+}
+
 .partner-preview-logo {
   position: relative;
   z-index: 1;
@@ -5512,6 +5520,14 @@ img.resource-loaded {
 }
 
 .partner-profile-card-e {
+  --card-accent: var(--brand-yellow-deep)
+}
+
+.partner-profile-card-f {
+  --card-accent: var(--green2)
+}
+
+.partner-profile-card-g {
   --card-accent: var(--brand-yellow-deep)
 }
 
